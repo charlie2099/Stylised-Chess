@@ -25,14 +25,28 @@ public class Piece : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Application.isPlaying)
+        {
+            if (this.GetComponentInChildren<Canvas>() != null &&
+            this.GetComponentInChildren<Canvas>().GetComponentInChildren<Renderer>().material != null)
+            {
+                this.GetComponentInChildren<Canvas>().
+                    GetComponentInChildren<Renderer>().
+                    material.SetFloat("_Health", (float)piece_health / (float)type.piece_health);
+            }
+        }
+    }
+
     private void Start()
     {
         piece_health = this.type.piece_health;
-        Debug.Log(
-            "Unit " + 
-            this.type.piece_type + 
-            " health = " + 
-            piece_health);
+        //Debug.Log(
+        //    "Unit " + 
+        //    this.type.piece_type + 
+        //    " health = " + 
+        //    piece_health);
     }
 
     private void OnValidate()

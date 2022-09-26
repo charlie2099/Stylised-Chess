@@ -22,12 +22,12 @@ public class PieceType : ScriptableObject
      */
 
     
-
-    public Color piece_colour = Color.white;
+    public bool white = true;
     public Mesh piece_model;
+    public string piece_type = "empty";
+    public Color piece_colour = Color.white;
+
     public int piece_health = 1;
     public int piece_damage = 1;
-    public string piece_type = "empty";
-    public bool white = true;
 
 }
