@@ -8,7 +8,7 @@ public class PieceManager : MonoBehaviour
 {
     public static List<Piece> all_pieces = new List<Piece>();
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         foreach(Piece piece in all_pieces)
         {

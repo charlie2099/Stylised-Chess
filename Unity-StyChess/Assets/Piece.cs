@@ -7,6 +7,7 @@ public class Piece : MonoBehaviour
 
 {
     public PieceType type;
+    public int piece_health;
 
     static readonly int shPropColour = Shader.PropertyToID("_Color");
 
@@ -22,6 +23,16 @@ public class Piece : MonoBehaviour
             }
             return mpb; 
         }
+    }
+
+    private void Start()
+    {
+        piece_health = this.type.piece_health;
+        Debug.Log(
+            "Unit " + 
+            this.type.piece_type + 
+            " health = " + 
+            piece_health);
     }
 
     private void OnValidate()
@@ -45,6 +56,21 @@ public class Piece : MonoBehaviour
         MeshRenderer rnd = GetComponent<MeshRenderer>();
         MPB.SetColor(shPropColour, type.piece_colour);
         rnd.SetPropertyBlock(MPB);
+    }
+
+    public void TakeDamage(int attack)
+    {
+        this.type.piece_health -= attack;
+        if (IsDead())
+        {
+
+        }
+
+    }
+
+    public bool IsDead()
+    {
+        return this.type.piece_health <= 0;
     }
 
 

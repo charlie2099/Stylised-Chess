@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2db15297de159414c80fb6b9db4d4e51, type: 3}
-  m_Name: King
+  m_Name: wQueen
   m_EditorClassIdentifier: 
-  piece_colour: {r: 0, g: 0, b: 0, a: 1}
+  piece_colour: {r: 1, g: 0, b: 1, a: 1}
   piece_model: {fileID: 0}
-  piece_health: 1
-  piece_damage: 0
+  piece_health: 27
+  piece_damage: 9
+  piece_type: Queen
+  white: 1

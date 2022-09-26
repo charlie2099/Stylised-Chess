@@ -21,15 +21,13 @@ public class PieceType : ScriptableObject
         
      */
 
+    
+
     public Color piece_colour = Color.white;
     public Mesh piece_model;
     public int piece_health = 1;
     public int piece_damage = 1;
+    public string piece_type = "empty";
+    public bool white = true;
 
-
-
-    private void OnValidate()
-    {
-        
-    }
 }
