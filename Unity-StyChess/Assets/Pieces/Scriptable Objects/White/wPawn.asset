@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db15297de159414c80fb6b9db4d4e51, type: 3}
   m_Name: wPawn
   m_EditorClassIdentifier: 
-  model: {fileID: 5237673700404405339, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   white: 1
-  piece_type: Pawn
+  model: {fileID: 5237673700404405339, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   piece_colour: {r: 1, g: 0, b: 0, a: 1}
+  piece_type: Pawn
   piece_health: 3
   piece_damage: 1
+  promotion_options:
+  - {fileID: 11400000, guid: 6ac56e7db182e0547bc4f879a7cb02b7, type: 2}
+  - {fileID: 11400000, guid: 665f3100512cd754e8a60efe3ff1225d, type: 2}
+  - {fileID: 11400000, guid: fd88bd69480390d478a8c3eacc38a884, type: 2}
+  - {fileID: 11400000, guid: a0d0049e503cb17449247c5e2cb33e15, type: 2}
+  weaknesses: []
