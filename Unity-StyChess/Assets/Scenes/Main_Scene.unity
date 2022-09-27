@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1671404324}
+  piece: {fileID: 0}
   x: 0
   y: 0
   piece_movement_attack_controller: {fileID: 0}
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1386228539}
+  piece: {fileID: 0}
   x: 7
   y: 0
   piece_movement_attack_controller: {fileID: 0}
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 522937125}
+  piece: {fileID: 0}
   x: 0
   y: 7
   piece_movement_attack_controller: {fileID: 0}
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 3
   y: 0
   piece_movement_attack_controller: {fileID: 0}
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 4
   y: 0
   piece_movement_attack_controller: {fileID: 0}
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 4
   y: 3
   piece_movement_attack_controller: {fileID: 0}
@@ -1378,7 +1378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 4
   y: 2
   piece_movement_attack_controller: {fileID: 0}
@@ -1477,9 +1477,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 65edac2cce527424187cbf0b75a877b6, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!4 &186579762
 Transform:
   m_ObjectHideFlags: 0
@@ -1690,7 +1691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 3
   y: 3
   piece_movement_attack_controller: {fileID: 0}
@@ -1769,7 +1770,6 @@ GameObject:
   - component: {fileID: 205787007}
   - component: {fileID: 205787006}
   - component: {fileID: 205787005}
-  - component: {fileID: 205787008}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1843,30 +1843,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45.08, y: 0, z: 0}
---- !u!114 &205787008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205787004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d518c34efbb2aee4eac860d2a655d388, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScreenEdgeBorderThickness: -9999999
-  RTSMode: 1
-  minPanSpeed: 10
-  maxPanSpeed: 10
-  secToMaxSpeed: 0
-  zoomSpeed: 0
-  enableMovementLimits: 0
-  heightLimit: {x: 0, y: 0}
-  lenghtLimit: {x: 0, y: 0}
-  widthLimit: {x: 0, y: 0}
-  rotationEnabled: 0
-  rotateSpeed: 0
 --- !u!21 &212313405
 Material:
   serializedVersion: 8
@@ -4353,9 +4329,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 65edac2cce527424187cbf0b75a877b6, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!4 &231172166
 Transform:
   m_ObjectHideFlags: 0
@@ -4466,7 +4443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 2
   y: 1
   piece_movement_attack_controller: {fileID: 0}
@@ -4565,9 +4542,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 110cc47b7af07794e86f124050588ce6, type: 2}
-  piece_health: 10
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 10
+  piece_damage: 0
 --- !u!4 &269718960
 Transform:
   m_ObjectHideFlags: 0
@@ -4684,7 +4662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 4
   y: 7
   piece_movement_attack_controller: {fileID: 0}
@@ -4956,7 +4934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 5
   y: 4
   piece_movement_attack_controller: {fileID: 0}
@@ -5102,7 +5080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 819579632}
+  piece: {fileID: 0}
   x: 1
   y: 6
   piece_movement_attack_controller: {fileID: 0}
@@ -5223,7 +5201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 4
   y: 5
   piece_movement_attack_controller: {fileID: 0}
@@ -5374,7 +5352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 269718955}
+  piece: {fileID: 0}
   x: 0
   y: 4
   piece_movement_attack_controller: {fileID: 0}
@@ -5601,9 +5579,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 65edac2cce527424187cbf0b75a877b6, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!4 &418857547
 Transform:
   m_ObjectHideFlags: 0
@@ -5711,7 +5690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 826014038}
+  piece: {fileID: 0}
   x: 6
   y: 2
   piece_movement_attack_controller: {fileID: 0}
@@ -5935,9 +5914,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: aa26fa0f3257c0249bfcfacd511c8f2f, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!114 &449680623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6097,7 +6077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 3
   y: 5
   piece_movement_attack_controller: {fileID: 0}
@@ -6213,7 +6193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 978211976}
+  piece: {fileID: 0}
   x: 7
   y: 5
   piece_movement_attack_controller: {fileID: 0}
@@ -6432,7 +6412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 3
   y: 6
   piece_movement_attack_controller: {fileID: 0}
@@ -6660,7 +6640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 2
   y: 2
   piece_movement_attack_controller: {fileID: 0}
@@ -6808,9 +6788,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 665f3100512cd754e8a60efe3ff1225d, type: 2}
-  piece_health: 15
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 15
+  piece_damage: 0
 --- !u!4 &522937130
 Transform:
   m_ObjectHideFlags: 0
@@ -6953,7 +6934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1296985681}
+  piece: {fileID: 0}
   x: 0
   y: 5
   piece_movement_attack_controller: {fileID: 0}
@@ -7104,7 +7085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 811139329}
+  piece: {fileID: 0}
   x: 1
   y: 5
   piece_movement_attack_controller: {fileID: 0}
@@ -7208,9 +7189,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 65edac2cce527424187cbf0b75a877b6, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!4 &602078366
 Transform:
   m_ObjectHideFlags: 0
@@ -7321,9 +7303,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: aa26fa0f3257c0249bfcfacd511c8f2f, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!114 &612270469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7406,9 +7389,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: eaedf7ebff5274d4682f340494cf3ce5, type: 2}
-  piece_health: 27
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 27
+  piece_damage: 0
 --- !u!65 &620093581
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7772,7 +7756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 5
   y: 2
   piece_movement_attack_controller: {fileID: 0}
@@ -8102,7 +8086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 449680620}
+  piece: {fileID: 0}
   x: 6
   y: 7
   piece_movement_attack_controller: {fileID: 0}
@@ -8233,7 +8217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 2
   y: 6
   piece_movement_attack_controller: {fileID: 0}
@@ -8349,7 +8333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 5
   y: 6
   piece_movement_attack_controller: {fileID: 0}
@@ -8465,7 +8449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 5
   y: 1
   piece_movement_attack_controller: {fileID: 0}
@@ -8614,7 +8598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 186579757}
+  piece: {fileID: 0}
   x: 1
   y: 1
   piece_movement_attack_controller: {fileID: 0}
@@ -8730,7 +8714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 2
   y: 4
   piece_movement_attack_controller: {fileID: 0}
@@ -8829,9 +8813,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 65edac2cce527424187cbf0b75a877b6, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!4 &788589210
 Transform:
   m_ObjectHideFlags: 0
@@ -9016,9 +9001,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: aa26fa0f3257c0249bfcfacd511c8f2f, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!114 &810708050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9080,9 +9066,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 65edac2cce527424187cbf0b75a877b6, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!4 &811139334
 Transform:
   m_ObjectHideFlags: 0
@@ -9143,9 +9130,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 65edac2cce527424187cbf0b75a877b6, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!4 &819579637
 Transform:
   m_ObjectHideFlags: 0
@@ -9253,9 +9241,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: aa26fa0f3257c0249bfcfacd511c8f2f, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!114 &826014041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9334,7 +9323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 2
   y: 0
   piece_movement_attack_controller: {fileID: 0}
@@ -9450,7 +9439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 3
   y: 7
   piece_movement_attack_controller: {fileID: 0}
@@ -9566,7 +9555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1790822659}
+  piece: {fileID: 0}
   x: 6
   y: 4
   piece_movement_attack_controller: {fileID: 0}
@@ -9713,7 +9702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 0}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 0
   y: 0
   piece_movement_attack_controller: {fileID: 0}
@@ -9730,7 +9719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 5
   y: 7
   piece_movement_attack_controller: {fileID: 0}
@@ -9846,7 +9835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 5
   y: 5
   piece_movement_attack_controller: {fileID: 0}
@@ -9961,9 +9950,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: ec0b0a58e9955f242acd46eb3fae631e, type: 2}
-  piece_health: 10
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 10
+  piece_damage: 0
 --- !u!65 &902896324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10133,7 +10123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1668837517}
+  piece: {fileID: 0}
   x: 6
   y: 1
   piece_movement_attack_controller: {fileID: 0}
@@ -10249,9 +10239,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 965830792963e2747ba3ef4dfa28bd6d, type: 2}
-  piece_health: 9
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 9
+  piece_damage: 0
 --- !u!33 &978211981
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10453,7 +10444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 2
   y: 3
   piece_movement_attack_controller: {fileID: 0}
@@ -10569,7 +10560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1236198509}
+  piece: {fileID: 0}
   x: 6
   y: 3
   piece_movement_attack_controller: {fileID: 0}
@@ -10685,7 +10676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 418857542}
+  piece: {fileID: 0}
   x: 1
   y: 7
   piece_movement_attack_controller: {fileID: 0}
@@ -10801,7 +10792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1256267969}
+  piece: {fileID: 0}
   x: 6
   y: 5
   piece_movement_attack_controller: {fileID: 0}
@@ -10953,9 +10944,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: e46dbc5f40458ba4eae26d02d63365dd, type: 2}
-  piece_health: 9
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 9
+  piece_damage: 0
 --- !u!65 &1058541992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11154,7 +11146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 788589205}
+  piece: {fileID: 0}
   x: 1
   y: 4
   piece_movement_attack_controller: {fileID: 0}
@@ -11372,9 +11364,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 965830792963e2747ba3ef4dfa28bd6d, type: 2}
-  piece_health: 9
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 9
+  piece_damage: 0
 --- !u!65 &1098556035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11606,7 +11599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1873667511}
+  piece: {fileID: 0}
   x: 0
   y: 1
   piece_movement_attack_controller: {fileID: 0}
@@ -11816,7 +11809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 612270466}
+  piece: {fileID: 0}
   x: 6
   y: 6
   piece_movement_attack_controller: {fileID: 0}
@@ -11932,7 +11925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 2
   y: 7
   piece_movement_attack_controller: {fileID: 0}
@@ -12053,7 +12046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1698438752}
+  piece: {fileID: 0}
   x: 0
   y: 6
   piece_movement_attack_controller: {fileID: 0}
@@ -12272,9 +12265,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: aa26fa0f3257c0249bfcfacd511c8f2f, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!114 &1236198512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12358,7 +12352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 810708047}
+  piece: {fileID: 0}
   x: 6
   y: 0
   piece_movement_attack_controller: {fileID: 0}
@@ -12474,9 +12468,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: aa26fa0f3257c0249bfcfacd511c8f2f, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!114 &1256267972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12588,7 +12583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 902896321}
+  piece: {fileID: 0}
   x: 7
   y: 3
   piece_movement_attack_controller: {fileID: 0}
@@ -12824,9 +12819,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: fd88bd69480390d478a8c3eacc38a884, type: 2}
-  piece_health: 9
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 9
+  piece_damage: 0
 --- !u!4 &1296985686
 Transform:
   m_ObjectHideFlags: 0
@@ -12904,7 +12900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 602078361}
+  piece: {fileID: 0}
   x: 1
   y: 0
   piece_movement_attack_controller: {fileID: 0}
@@ -13020,7 +13016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1370436917}
+  piece: {fileID: 0}
   x: 0
   y: 2
   piece_movement_attack_controller: {fileID: 0}
@@ -13352,7 +13348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1415966407}
+  piece: {fileID: 0}
   x: 0
   y: 3
   piece_movement_attack_controller: {fileID: 0}
@@ -13451,9 +13447,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: fd88bd69480390d478a8c3eacc38a884, type: 2}
-  piece_health: 9
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 9
+  piece_damage: 0
 --- !u!4 &1370436922
 Transform:
   m_ObjectHideFlags: 0
@@ -13706,7 +13703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 4
   y: 4
   piece_movement_attack_controller: {fileID: 0}
@@ -13821,9 +13818,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 118b6afdca6b7ba4aa09c7d5ed0af020, type: 2}
-  piece_health: 15
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 15
+  piece_damage: 0
 --- !u!65 &1386228542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13885,7 +13883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 2
   y: 5
   piece_movement_attack_controller: {fileID: 0}
@@ -13984,9 +13982,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 6ac56e7db182e0547bc4f879a7cb02b7, type: 2}
-  piece_health: 27
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 27
+  piece_damage: 0
 --- !u!4 &1415966412
 Transform:
   m_ObjectHideFlags: 0
@@ -14460,7 +14459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 3
   y: 4
   piece_movement_attack_controller: {fileID: 0}
@@ -14683,7 +14682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 3
   y: 1
   piece_movement_attack_controller: {fileID: 0}
@@ -14804,7 +14803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 5
   y: 0
   piece_movement_attack_controller: {fileID: 0}
@@ -14925,7 +14924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1916015776}
+  piece: {fileID: 0}
   x: 7
   y: 7
   piece_movement_attack_controller: {fileID: 0}
@@ -15251,7 +15250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 5
   y: 3
   piece_movement_attack_controller: {fileID: 0}
@@ -17685,7 +17684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1098556032}
+  piece: {fileID: 0}
   x: 7
   y: 2
   piece_movement_attack_controller: {fileID: 0}
@@ -17801,7 +17800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1058541989}
+  piece: {fileID: 0}
   x: 7
   y: 6
   piece_movement_attack_controller: {fileID: 0}
@@ -18094,7 +18093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 4
   y: 1
   piece_movement_attack_controller: {fileID: 0}
@@ -18210,9 +18209,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: aa26fa0f3257c0249bfcfacd511c8f2f, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!114 &1668837520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18274,9 +18274,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 665f3100512cd754e8a60efe3ff1225d, type: 2}
-  piece_health: 15
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 15
+  piece_damage: 0
 --- !u!4 &1671404329
 Transform:
   m_ObjectHideFlags: 0
@@ -18500,9 +18501,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: a0d0049e503cb17449247c5e2cb33e15, type: 2}
-  piece_health: 9
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 9
+  piece_damage: 0
 --- !u!4 &1698438757
 Transform:
   m_ObjectHideFlags: 0
@@ -18687,7 +18689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 231172161}
+  piece: {fileID: 0}
   x: 1
   y: 3
   piece_movement_attack_controller: {fileID: 0}
@@ -18803,7 +18805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 1933032771}
+  piece: {fileID: 0}
   x: 1
   y: 2
   piece_movement_attack_controller: {fileID: 0}
@@ -18924,7 +18926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 4
   y: 6
   piece_movement_attack_controller: {fileID: 0}
@@ -19040,9 +19042,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: aa26fa0f3257c0249bfcfacd511c8f2f, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!114 &1790822662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19151,7 +19154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 0}
+  piece: {fileID: 0}
   x: 3
   y: 2
   piece_movement_attack_controller: {fileID: 0}
@@ -19250,9 +19253,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: a0d0049e503cb17449247c5e2cb33e15, type: 2}
-  piece_health: 9
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 9
+  piece_damage: 0
 --- !u!4 &1873667516
 Transform:
   m_ObjectHideFlags: 0
@@ -19565,9 +19569,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 118b6afdca6b7ba4aa09c7d5ed0af020, type: 2}
-  piece_health: 15
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 15
+  piece_damage: 0
 --- !u!65 &1916015779
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19642,9 +19647,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 65edac2cce527424187cbf0b75a877b6, type: 2}
-  piece_health: 3
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 3
+  piece_damage: 0
 --- !u!4 &1933032776
 Transform:
   m_ObjectHideFlags: 0
@@ -19868,9 +19874,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: e46dbc5f40458ba4eae26d02d63365dd, type: 2}
-  piece_health: 9
   model: {fileID: 624857428279858006, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   col: {r: 0, g: 0, b: 0, a: 0}
+  piece_health: 9
+  piece_damage: 0
 --- !u!65 &2000347617
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20005,7 +20012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 620093578}
+  piece: {fileID: 0}
   x: 7
   y: 4
   piece_movement_attack_controller: {fileID: 0}
@@ -20121,7 +20128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_gameboard: {fileID: 218067299}
-  unit: {fileID: 2000347614}
+  piece: {fileID: 0}
   x: 7
   y: 1
   piece_movement_attack_controller: {fileID: 0}

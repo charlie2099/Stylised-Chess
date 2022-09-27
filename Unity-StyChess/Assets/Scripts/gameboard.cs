@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class Gameboard : MonoBehaviour
+public class gameboard : MonoBehaviour
 {
-    public static Gameboard Instance;
+    public static gameboard Instance;
     
     public List<tile> gameboard_tiles = new List<tile>();
     [SerializeField] GameObject text_prefab;

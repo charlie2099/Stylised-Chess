@@ -63,7 +63,7 @@ public class PieceSelector : MonoBehaviour
         _selectedObject = hitObject;
         
         var piece = _selectedObject.GetComponent<Piece>();
-        var tile = Gameboard.Instance._piecesDict[piece];
+        var tile = gameboard.Instance._piecesDict[piece];
         OnPieceSelected?.Invoke(piece, tile);
     }
 

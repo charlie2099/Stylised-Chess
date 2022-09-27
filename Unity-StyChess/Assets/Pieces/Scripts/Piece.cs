@@ -5,7 +5,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class Piece : MonoBehaviour
-
 {
     public PieceType type;
     public GameObject model;
@@ -137,4 +136,10 @@ public class Piece : MonoBehaviour
         
     }
 
+
+    void OnMouseDown()
+    {
+        //do somethink
+    }
 }
+
