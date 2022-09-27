@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db15297de159414c80fb6b9db4d4e51, type: 3}
   m_Name: wBishop
   m_EditorClassIdentifier: 
-  model: {fileID: 5237673700404405339, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
   white: 1
+  model: {fileID: 7996242298945482591, guid: 8b5d9548a61c2874e9eff7dcc5156792, type: 3}
+  piece_colour: {r: 1, g: 1, b: 1, a: 1}
   piece_type: Bishop
-  piece_colour: {r: 1, g: 0.5254902, b: 0, a: 1}
   piece_health: 9
   piece_damage: 3
+  promotion_options: []
+  weaknesses: []
