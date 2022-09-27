@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db15297de159414c80fb6b9db4d4e51, type: 3}
   m_Name: wKnight
   m_EditorClassIdentifier: 
-  piece_colour: {r: 0, g: 0.25355005, b: 1, a: 1}
+  white: 1
   piece_model: {fileID: 0}
+  piece_type: Knight
+  piece_colour: {r: 0, g: 0.25355005, b: 1, a: 1}
   piece_health: 9
   piece_damage: 3
-  piece_type: Knight
-  white: 1

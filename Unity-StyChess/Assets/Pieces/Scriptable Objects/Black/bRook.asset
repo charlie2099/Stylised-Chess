@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db15297de159414c80fb6b9db4d4e51, type: 3}
   m_Name: bRook
   m_EditorClassIdentifier: 
-  piece_colour: {r: 0, g: 1, b: 0, a: 1}
+  white: 0
   piece_model: {fileID: 0}
+  piece_type: Rook
+  piece_colour: {r: 0, g: 1, b: 0, a: 1}
   piece_health: 15
   piece_damage: 5
-  piece_type: Rook
-  white: 1

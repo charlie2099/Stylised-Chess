@@ -2,40 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteAlways]
 public class Piece : MonoBehaviour
 
 {
     public PieceType type;
     public int piece_health = 0;
+    public GameObject model;
 
     static readonly int shPropColour = Shader.PropertyToID("_Color");
 
-    MaterialPropertyBlock mpb;
+    //MaterialPropertyBlock mpb;
 
-    MaterialPropertyBlock MPB
-    {
-        get 
-        { 
-            if (mpb == null)
-            {
-                mpb = new MaterialPropertyBlock(); 
-            }
-            return mpb; 
-        }
-    }
+    //MaterialPropertyBlock MPB
+    //{
+    //    get
+    //    {
+    //        if (mpb == null)
+    //        {
+    //            mpb = new MaterialPropertyBlock();
+    //        }
+    //        return mpb;
+    //    }
+    //}
 
     private void Update()
     {
         if (Application.isPlaying)
         {
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                TakeDamage(1);
-            }
+            //if (Input.GetKeyDown(KeyCode.W))
+            //{
+            //    TakeDamage(1);
+            //}
 
-            if (this.GetComponentInChildren<Canvas>() != null &&
-            this.GetComponentInChildren<Canvas>().GetComponentInChildren<Renderer>().material != null)
+            if (this.GetComponentInChildren<Canvas>() != null && 
+                this.GetComponentInChildren<Canvas>().GetComponentInChildren<Renderer>().material != null)
             {
                 this.GetComponentInChildren<Canvas>().
                     GetComponentInChildren<Renderer>().
@@ -46,23 +46,26 @@ public class Piece : MonoBehaviour
 
     private void Start()
     {
+        //ApplyProperties();
         piece_health = this.type.piece_health;
-        Debug.Log(
-            "Unit " +
-            this.type.piece_type +
-            " health = " +
-            piece_health);
+        //Debug.Log(
+        //    "Unit " +
+        //    this.type.piece_type +
+        //    " health = " +
+        //    piece_health);
     }
 
     private void OnValidate()
     {
-        ApplyProperties();
+        //ApplyProperties();
     }
 
     private void OnEnable()
     {
-        ApplyProperties();
+        
         PieceManager.all_pieces.Add(this);
+        UpdateModel();
+        Instantiate(model, this.transform);
     }
 
     private void OnDisable()
@@ -70,11 +73,16 @@ public class Piece : MonoBehaviour
         PieceManager.all_pieces.Remove(this);
     }
 
-    public void ApplyProperties()
+    //public void ApplyProperties()
+    //{
+    //    MeshRenderer rnd = this.GetComponentInChildren<MeshRenderer>();
+    //    MPB.SetColor(shPropColour, type.piece_colour);
+    //    rnd.SetPropertyBlock(MPB);
+    //}
+
+    private void UpdateModel()
     {
-        MeshRenderer rnd = GetComponent<MeshRenderer>();
-        MPB.SetColor(shPropColour, type.piece_colour);
-        rnd.SetPropertyBlock(MPB);
+        model = this.type.model;
     }
 
     public void TakeDamage(int attack)

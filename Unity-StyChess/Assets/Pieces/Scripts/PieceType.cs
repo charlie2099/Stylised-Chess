@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
+[RequireComponent(typeof(GameObject))]
 public class PieceType : ScriptableObject
 {
     /*
@@ -20,10 +21,9 @@ public class PieceType : ScriptableObject
         Damage (int)
         
      */
+    public GameObject model;
 
-    
     public bool white = true;
-    public Mesh piece_model;
     public string piece_type = "empty";
     public Color piece_colour = Color.white;
 
