@@ -5,14 +5,14 @@ using TMPro;
 public class gameboard : MonoBehaviour
 {
     [SerializeField]
-    List<tile> gameboard_tiles = new List<tile>();
+    public List<tile> gameboard_tiles = new List<tile>();
     [SerializeField]
     GameObject text_prefab;
     public void create_cordinates()
     {
         for (int i = 0; i < gameboard_tiles.Count; i++)
         {
-            Debug.Log(gameboard_tiles.Count);
+            //Debug.Log(gameboard_tiles.Count);
             var x = gameboard_tiles[i].transform.position.x;
             var y = gameboard_tiles[i].transform.position.y;
             var z = gameboard_tiles[i].transform.position.z;
@@ -21,8 +21,8 @@ public class gameboard : MonoBehaviour
             //var TEXT = t.Find("txt");
             if (TEXT != null)
                 TEXT.text = gameboard_tiles[i].x.ToString() + "," + gameboard_tiles[i].y.ToString();
-            else
-                Debug.Log("Text is null");
+            //else
+                //Debug.Log("Text is null");
         }
     }
 
