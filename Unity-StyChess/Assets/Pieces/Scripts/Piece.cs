@@ -7,7 +7,7 @@ public class Piece : MonoBehaviour
 
 {
     public PieceType type;
-    public int piece_health;
+    public int piece_health = 0;
 
     static readonly int shPropColour = Shader.PropertyToID("_Color");
 
@@ -29,6 +29,11 @@ public class Piece : MonoBehaviour
     {
         if (Application.isPlaying)
         {
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                TakeDamage(1);
+            }
+
             if (this.GetComponentInChildren<Canvas>() != null &&
             this.GetComponentInChildren<Canvas>().GetComponentInChildren<Renderer>().material != null)
             {
@@ -42,11 +47,11 @@ public class Piece : MonoBehaviour
     private void Start()
     {
         piece_health = this.type.piece_health;
-        //Debug.Log(
-        //    "Unit " + 
-        //    this.type.piece_type + 
-        //    " health = " + 
-        //    piece_health);
+        Debug.Log(
+            "Unit " +
+            this.type.piece_type +
+            " health = " +
+            piece_health);
     }
 
     private void OnValidate()
@@ -74,7 +79,7 @@ public class Piece : MonoBehaviour
 
     public void TakeDamage(int attack)
     {
-        this.type.piece_health -= attack;
+        piece_health -= attack;
         if (IsDead())
         {
 
