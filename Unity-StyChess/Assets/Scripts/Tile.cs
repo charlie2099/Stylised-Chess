@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    public GameObject unit;
+    public Piece piece;
     [SerializeField]
     public int x;
     [SerializeField]
