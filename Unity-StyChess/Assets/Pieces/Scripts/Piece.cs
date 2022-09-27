@@ -8,6 +8,7 @@ public class Piece : MonoBehaviour
     public PieceType type;
     public int piece_health = 0;
     public GameObject model;
+    public Color col;
 
     static readonly int shPropColour = Shader.PropertyToID("_Color");
 
@@ -48,6 +49,8 @@ public class Piece : MonoBehaviour
     {
         //ApplyProperties();
         piece_health = this.type.piece_health;
+        col = type.piece_colour;
+        
         //Debug.Log(
         //    "Unit " +
         //    this.type.piece_type +
@@ -61,8 +64,7 @@ public class Piece : MonoBehaviour
     }
 
     private void OnEnable()
-    {
-        
+    {       
         PieceManager.all_pieces.Add(this);
         UpdateModel();
         Instantiate(model, this.transform);
