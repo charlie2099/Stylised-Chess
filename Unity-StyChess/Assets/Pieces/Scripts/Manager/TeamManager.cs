@@ -4,7 +4,6 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-[ExecuteAlways]
 public class TeamManager : MonoBehaviour
 {
     public bool team_white = true;
@@ -43,7 +42,7 @@ public class TeamManager : MonoBehaviour
         }
     }
     
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Color team_colour = Color.white;
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ModelColour : MonoBehaviour
@@ -43,5 +44,10 @@ public class ModelColour : MonoBehaviour
         }
 
 
+    }
+
+    public void DeleteMe()
+    {
+        Destroy(this.gameObject);
     }
 }
