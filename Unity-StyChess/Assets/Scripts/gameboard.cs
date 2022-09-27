@@ -5,7 +5,7 @@ using TMPro;
 public class gameboard : MonoBehaviour
 {
     [SerializeField]
-    List<tile> gameboard_tiles = new List<tile>();
+    List<Tile> gameboard_tiles = new List<Tile>();
     [SerializeField]
     GameObject text_prefab;
     public void create_cordinates()

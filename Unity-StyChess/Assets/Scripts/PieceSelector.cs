@@ -12,7 +12,7 @@ public class PieceSelector : MonoBehaviour
     [SerializeField] private GameObject selectionIndicator;
     [SerializeField] private Color selectionIndicatorColour;
     [SerializeField] private Color unitHighlightColour;
-
+    
     private GameObject _highlightedObject;
     private GameObject _selectedObject;
     private Color _defaultColour;
