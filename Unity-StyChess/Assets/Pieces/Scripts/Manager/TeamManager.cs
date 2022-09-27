@@ -9,7 +9,7 @@ public class TeamManager : MonoBehaviour
     public bool team_white = true;
     public List<Piece> team_pieces = new List<Piece>();
 
-    private void OnEnable()
+    private void Start()
     {
         GetPieces();
     }

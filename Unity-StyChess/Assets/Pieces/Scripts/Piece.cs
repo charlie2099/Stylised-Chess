@@ -40,7 +40,7 @@ public class Piece : MonoBehaviour
         {
             if (this.type.piece_type == "Pawn")
             {
-                //Promote(Promotion.bishop);
+                Promote(Promotion.bishop);
                 //TakeDamage(1);
             }
         }
