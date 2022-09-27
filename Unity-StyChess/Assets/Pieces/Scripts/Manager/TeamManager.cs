@@ -8,10 +8,40 @@ public class TeamManager : MonoBehaviour
 {
     public bool team_white = true;
     public List<Piece> team_pieces = new List<Piece>();
+    public PieceSelector ps;
 
     private void Start()
     {
         GetPieces();
+    }
+
+    private void FixedUpdate()
+    {
+        DebugSelected();
+        TestFunction();
+    }
+
+    private void TestFunction()
+    {
+        // if last selected on my team and selected on enemy team
+        // apply damage from last selected to selected
+        // clear selected
+
+        if (ps.GetSelectedObject().GetComponent<Piece>() != null &&
+            ps.GetLastSelectedObject().GetComponent<Piece>() != null)
+        {
+            // We can evaluate whether to apply damage or not
+            if (ps.GetLastSelectedObject().GetComponent<Piece>().type.white == team_white &&
+                ps.GetSelectedObject().GetComponent<Piece>().type.white != team_white)
+            {
+                // Different teams selected
+                GetComponentInParent<CombatManager>().AfightsB(
+                    ps.GetLastSelectedObject().GetComponent<Piece>(), 
+                    ps.GetSelectedObject().GetComponent<Piece>());
+
+                ps.ClearSelected();
+            }
+        }
     }
 
     private void GetPieces()
@@ -37,6 +67,36 @@ public class TeamManager : MonoBehaviour
                     {
                         team_pieces.Add(_piece);
                     }
+                }
+            }
+        }
+    }
+
+    private void DebugSelected()
+    {
+        string str = "A";
+        if (team_white) { str = "White"; }
+        if (!team_white) { str = "Black"; }
+
+        if (ps.GetSelectedObject().GetComponent<Piece>() != null)
+        {
+            foreach (Piece _p in team_pieces)
+            {
+                if (ps.GetSelectedObject().GetComponent<Piece>() == _p)
+                {
+                    //Debug.Log(str + " " + ps.GetSelectedObject().GetComponent<Piece>().type.piece_type + " selected");
+                    Debug.Log(str + " " + _p.type.piece_type + " selected");
+                }
+            }
+        }
+        if (ps.GetLastSelectedObject().GetComponent<Piece>() != null)
+        {
+            foreach (Piece _p in team_pieces)
+            {
+                if (ps.GetLastSelectedObject().GetComponent<Piece>() == _p)
+                {
+                    //Debug.Log(str + " " + ps.GetSelectedObject().GetComponent<Piece>().type.piece_type + " last selected");
+                    Debug.Log(str + " " + _p.type.piece_type + " last selected");
                 }
             }
         }

@@ -9,14 +9,15 @@ public class CombatManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            AfightsB(all_pieces[0], all_pieces[1]);
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    AfightsB(all_pieces[0], all_pieces[1]);
+        //}
     }
 
     public void AfightsB(Piece _a, Piece _b)
     {
+        Debug.Log(_b.type.piece_type + " taking " + _a.piece_damage + " damage!");
         _b.TakeDamage(_a.piece_damage);
     }
 

@@ -16,7 +16,46 @@ public class PieceSelector : MonoBehaviour
     
     private GameObject _highlightedObject;
     private GameObject _selectedObject;
+    private GameObject _lastSelectedObject;
     private Color _defaultColour;
+
+    public void ClearSelected()
+    {
+        _selectedObject = null;
+        _lastSelectedObject = null;
+    }
+
+    public GameObject GetSelectedObject()
+    {
+        if (_selectedObject != null)
+        {
+            return _selectedObject;
+        }
+        // return garbage if _selectedObject null
+        GameObject go = new GameObject();
+        return go;
+    }
+
+    public GameObject GetLastSelectedObject()
+    {
+        if (_lastSelectedObject != null)
+        {
+            return _lastSelectedObject;
+        }
+        // return garbage if _selectedObject null
+        GameObject go = new GameObject();
+        return go;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Vector3 scale = new Vector3(3, 3, 3);
+        Vector3 offset = new Vector3(0, 3, 0);
+        Gizmos.color = Color.magenta;
+        if (_selectedObject != null) { Gizmos.DrawWireCube(_selectedObject.transform.position + offset, scale); }
+        if (_lastSelectedObject != null) { Gizmos.DrawWireCube(_lastSelectedObject.transform.position + offset, scale); }
+
+        }
 
     private void Start()
     {
@@ -59,7 +98,11 @@ public class PieceSelector : MonoBehaviour
     private void SelectPiece(GameObject hitObject)
     {
         ConfigureIndicatorPosAndScale(hitObject);
-        
+
+        if (_selectedObject != null)
+        {
+            _lastSelectedObject = _selectedObject;
+        }
         _selectedObject = hitObject;
         
         var piece = _selectedObject.GetComponent<Piece>();
