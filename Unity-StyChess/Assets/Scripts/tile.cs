@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tile : MonoBehaviour
+public class Tile : MonoBehaviour
 {
-    public gameboard my_gameboard;
-    public GameObject unit;
+    public Gameboard my_gameboard;
+    public Piece piece;
     [SerializeField]
     public int x;
     [SerializeField]
@@ -15,11 +15,11 @@ public class tile : MonoBehaviour
     PieceMovementAttack piece_movement_attack_controller;
     private void Awake()
     {
-        if(this.unit != null)
+        if(this.piece != null)
         {
-            if (this.unit.GetComponent<PieceMovementAttack>() != null)
+            if (this.piece.GetComponent<PieceMovementAttack>() != null)
             {
-                piece_movement_attack_controller = this.unit.GetComponent<PieceMovementAttack>();
+                piece_movement_attack_controller = this.piece.GetComponent<PieceMovementAttack>();
                 piece_movement_attack_controller.current_tile = this;
             }
         }
@@ -37,9 +37,9 @@ public class tile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(unit != null)
+        if(piece != null)
         {
-            unit.transform.position = this.transform.position;
+            piece.transform.position = this.transform.position;
         }
     }
 }

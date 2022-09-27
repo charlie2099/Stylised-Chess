@@ -1,14 +1,44 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class gameboard : MonoBehaviour
+public class Gameboard : MonoBehaviour
 {
-    [SerializeField]
-    public List<tile> gameboard_tiles = new List<tile>();
-    [SerializeField]
-    GameObject text_prefab;
-    public void create_cordinates()
+    public static Gameboard Instance;
+    
+    public List<Tile> gameboard_tiles = new List<Tile>();
+    [SerializeField] GameObject text_prefab;
+
+    public List<Tile> Tiles => gameboard_tiles;
+    public Dictionary<Piece, Tile> _piecesDict = new Dictionary<Piece, Tile>();
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Debug.LogError("There should only be one instance of the GameBoard in the scene!");
+        }
+    }
+
+    void Start()
+    {
+        CreateCoordinates();
+
+        foreach (var tile in gameboard_tiles)
+        {
+            if (tile.piece != null)
+            {
+                _piecesDict.Add(tile.piece, tile);
+            }
+        }
+        
+        //Debug.Log("Tile: " + gameboard_tiles[7], gameboard_tiles[7]);
+    }
+    
+    public void CreateCoordinates()
     {
         for (int i = 0; i < gameboard_tiles.Count; i++)
         {
@@ -24,17 +54,5 @@ public class gameboard : MonoBehaviour
             //else
                 //Debug.Log("Text is null");
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        create_cordinates();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
