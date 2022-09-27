@@ -5,11 +5,11 @@ public class Gameboard : MonoBehaviour
 {
     public static Gameboard Instance;
     
-    public List<Tile> gameboard_tiles = new List<Tile>();
+    public List<tile> gameboard_tiles = new List<tile>();
     [SerializeField] GameObject text_prefab;
 
-    public List<Tile> Tiles => gameboard_tiles;
-    public Dictionary<Piece, Tile> _piecesDict = new Dictionary<Piece, Tile>();
+    public List<tile> Tiles => gameboard_tiles;
+    public Dictionary<Piece, tile> _piecesDict = new Dictionary<Piece, tile>();
 
     private void Awake()
     {

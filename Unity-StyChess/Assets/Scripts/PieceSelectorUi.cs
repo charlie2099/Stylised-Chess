@@ -17,7 +17,7 @@ public class PieceSelectorUi : MonoBehaviour
         pieceSelector.OnPieceSelected -= UpdatePieceSelectedText;
     }
 
-    private void UpdatePieceSelectedText(Piece piece, Tile tile)
+    private void UpdatePieceSelectedText(Piece piece, tile tile)
     {
         pieceSelectedText.text = "Piece: <color=orange>" + piece.name + "</color>";
         tileSelectedText.text = "Tile: <color=green>(" + tile.x + "," + tile.y + ")</color>";

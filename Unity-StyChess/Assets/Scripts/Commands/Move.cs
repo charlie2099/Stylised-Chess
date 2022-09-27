@@ -5,14 +5,14 @@ namespace Commands
     public class Move : ICommand
     {
         private Piece _piece;
-        private Tile _tile;
-        private Tile _previousTile;
+        private tile _tile;
+        private tile _previousTile;
         
-        public Move(Piece piece, Tile tile) 
+        public Move(Piece piece, tile tile) 
         {
             _piece = piece;
             _tile = tile;
-            _previousTile = piece.GetComponent<Tile>();
+            _previousTile = piece.GetComponent<tile>();
         }
         
         public void Execute()

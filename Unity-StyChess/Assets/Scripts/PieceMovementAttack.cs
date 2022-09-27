@@ -13,7 +13,7 @@ public class PieceMovementAttack : MonoBehaviour
     //4 -> queen
     //5 -> king
     public int my_type;
-    public Tile current_tile;
+    public tile current_tile;
     public int my_cordinate_x;
     public int my_cordinate_y;
     public List<List<int>> all_cordinates = new List<List<int>>();

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PieceSelector : MonoBehaviour
 {
-    public event Action<Piece, Tile> OnPieceSelected;
+    public event Action<Piece, tile> OnPieceSelected;
 
     [SerializeField] private Camera camera;
     
@@ -38,7 +38,15 @@ public class PieceSelector : MonoBehaviour
                 //HighlightObject(hitObject);
                 if (Input.GetMouseButtonDown(0))
                 {
-                    SelectPiece(hitObject);
+                    try
+                    {
+                        SelectPiece(hitObject);
+                    }
+                    catch (Exception e)
+                    {
+                        //Debug.Log(e);
+                    }
+
                 }
             }
         }
