@@ -22,6 +22,8 @@ public class tile : MonoBehaviour
                 piece_movement_attack_controller = this.piece.GetComponent<PieceMovementAttack>();
                 piece_movement_attack_controller.current_tile = this;
             }
+
+            this.piece.my_tile = this;
         }
     }
     // Start is called before the first frame update
@@ -41,5 +43,10 @@ public class tile : MonoBehaviour
         {
             piece.transform.position = this.transform.position;
         }
+    }
+
+    public void OnMouseDown()
+    {
+        this.my_gameboard.selected_tile = this;
     }
 }

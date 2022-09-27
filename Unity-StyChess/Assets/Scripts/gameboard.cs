@@ -55,4 +55,25 @@ public class gameboard : MonoBehaviour
                 //Debug.Log("Text is null");
         }
     }
+
+    public Piece selected_piece;
+    public tile selected_tile;
+
+    public void move_piece()
+    {
+        if(selected_piece != null && selected_tile != null)
+        {
+            if (selected_tile.piece == null)
+            {
+                selected_tile.piece = selected_piece;
+                selected_piece.my_tile.piece = null;
+                selected_piece.my_tile = selected_tile;
+            }
+        }
+    }
+
+    public void Update()
+    {
+        move_piece();
+    }
 }

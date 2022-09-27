@@ -11,7 +11,7 @@ public class Piece : MonoBehaviour
     public Color col;
     public int piece_health;
     public int piece_damage;
-
+    public tile my_tile;
     static readonly int shPropColour = Shader.PropertyToID("_Color");
 
     public enum Promotion
@@ -135,11 +135,10 @@ public class Piece : MonoBehaviour
         }
         
     }
-
-
+    public gameboard my_gameboard;
     void OnMouseDown()
     {
-        //do somethink
+        this.my_gameboard.selected_piece = this;
     }
 }
 

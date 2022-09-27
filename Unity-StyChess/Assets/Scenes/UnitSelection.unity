@@ -4473,6 +4473,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!136 &3145290937851459373
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4580,6 +4581,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 27
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!136 &3145290937967556535
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4654,6 +4656,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!136 &3145290938038185033
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4798,6 +4801,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!33 &3145290938343342678
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4872,6 +4876,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 15
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!4 &3145290938407435458
 Transform:
   m_ObjectHideFlags: 0
@@ -4913,6 +4918,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!136 &3145290938407435463
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4987,6 +4993,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!136 &3145290938618602555
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5061,6 +5068,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!136 &3145290938917400893
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5135,6 +5143,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!136 &3145290939022746193
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5209,6 +5218,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 10
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!136 &3145290939106970835
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5355,6 +5365,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 15
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!136 &3145290939220703833
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5462,6 +5473,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!1 &3145290939304553160
 GameObject:
   m_ObjectHideFlags: 0
@@ -5536,20 +5548,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
---- !u!136 &3145290939418322405
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3145290939418322407}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!1 &3145290939418322407
 GameObject:
   m_ObjectHideFlags: 0
@@ -5560,8 +5559,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3145290939418322400}
   - component: {fileID: 3145290939418322403}
-  - component: {fileID: 3145290939418322405}
   - component: {fileID: 3145290939418322404}
+  - component: {fileID: 3145290939418322408}
   m_Layer: 0
   m_Name: Pawn0
   m_TagString: Untagged
@@ -5569,6 +5568,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!136 &3145290939418322408
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145290939418322407}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &3145290939491857380
 Transform:
   m_ObjectHideFlags: 0
@@ -5610,6 +5623,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!136 &3145290939491857385
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5717,6 +5731,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!4 &3145290939647613048
 Transform:
   m_ObjectHideFlags: 0
@@ -5758,6 +5773,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!136 &3145290939647613053
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5902,7 +5918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 5
   y: 3
@@ -5954,7 +5970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290938407435462}
   x: 7
   y: 6
@@ -6035,7 +6051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290937851459372}
   x: 7
   y: 2
@@ -6186,7 +6202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 3
   y: 4
@@ -6290,7 +6306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 5
   y: 0
@@ -6406,7 +6422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290938343342683}
   x: 7
   y: 7
@@ -6534,7 +6550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 3
   y: 1
@@ -6615,7 +6631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 2
   y: 5
@@ -6816,7 +6832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799577185840901}
   x: 0
   y: 3
@@ -6946,7 +6962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 4
   y: 4
@@ -6986,7 +7002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799578162568039}
   x: 1
   y: 0
@@ -7079,7 +7095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799576741293323}
   x: 0
   y: 2
@@ -7230,7 +7246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290939106970834}
   x: 7
   y: 3
@@ -7346,7 +7362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290939235113785}
   x: 6
   y: 0
@@ -7462,7 +7478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 2
   y: 7
@@ -7642,7 +7658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799576376405609}
   x: 0
   y: 6
@@ -7659,7 +7675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290939022746192}
   x: 6
   y: 6
@@ -7860,7 +7876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799577586540078}
   x: 0
   y: 1
@@ -7976,7 +7992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290937967556534}
   x: 7
   y: 4
@@ -8106,7 +8122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290938249004831}
   x: 7
   y: 1
@@ -8123,7 +8139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 3
   y: 2
@@ -8338,7 +8354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 4
   y: 6
@@ -8440,7 +8456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799576817479498}
   x: 1
   y: 2
@@ -8471,7 +8487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799576284579468}
   x: 1
   y: 3
@@ -8587,7 +8603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 4
   y: 1
@@ -8703,7 +8719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 3
   y: 5
@@ -8819,7 +8835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290938038185032}
   x: 7
   y: 5
@@ -9020,7 +9036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 3
   y: 6
@@ -9086,7 +9102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 2
   y: 2
@@ -9167,7 +9183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290939647613052}
   x: 6
   y: 2
@@ -9382,7 +9398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799577472832842}
   x: 0
   y: 4
@@ -9399,7 +9415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799576170987270}
   x: 1
   y: 6
@@ -9515,7 +9531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 4
   y: 5
@@ -9674,7 +9690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 4
   y: 7
@@ -9832,7 +9848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 5
   y: 4
@@ -9948,7 +9964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 2
   y: 1
@@ -10075,8 +10091,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b9218b285d51f4dadde930ea1b2f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameboard_tiles: []
-  text_prefab: {fileID: 0}
+  gameboard_tiles:
+  - {fileID: 7649583250350551375}
+  - {fileID: 7649583249181984252}
+  - {fileID: 7649583248899303541}
+  - {fileID: 7649583250278540806}
+  - {fileID: 7649583250268955520}
+  - {fileID: 7649583250664492397}
+  - {fileID: 7649583249111707177}
+  - {fileID: 7649583250350200624}
+  - {fileID: 7649583249393440399}
+  - {fileID: 7649583250525797554}
+  - {fileID: 7649583250776158425}
+  - {fileID: 7649583249833157696}
+  - {fileID: 7649583248918783010}
+  - {fileID: 7649583250149830694}
+  - {fileID: 7649583250687021956}
+  - {fileID: 7649583249307057722}
+  - {fileID: 7649583248845561376}
+  - {fileID: 7649583249990202848}
+  - {fileID: 7649583250842569853}
+  - {fileID: 7649583250264036552}
+  - {fileID: 7649583249660028420}
+  - {fileID: 7649583249925247980}
+  - {fileID: 7649583249768817414}
+  - {fileID: 7649583249120010296}
+  - {fileID: 7649583249169156668}
+  - {fileID: 7649583250428282224}
+  - {fileID: 7649583248819379083}
+  - {fileID: 7649583250253744160}
+  - {fileID: 7649583250245514261}
+  - {fileID: 7649583250419836737}
+  - {fileID: 7649583249790920456}
+  - {fileID: 7649583249010511446}
+  - {fileID: 7649583249341004726}
+  - {fileID: 7649583250553911208}
+  - {fileID: 7649583250124465454}
+  - {fileID: 7649583249050112223}
+  - {fileID: 7649583248872635164}
+  - {fileID: 7649583250728811311}
+  - {fileID: 7649583250451007600}
+  - {fileID: 7649583250005107295}
+  - {fileID: 7649583249878662616}
+  - {fileID: 7649583250410794941}
+  - {fileID: 7649583250565048915}
+  - {fileID: 7649583250021905992}
+  - {fileID: 7649583249874833688}
+  - {fileID: 7649583248947626080}
+  - {fileID: 7649583250937395959}
+  - {fileID: 7649583250894212599}
+  - {fileID: 7649583248845314579}
+  - {fileID: 7649583249216290668}
+  - {fileID: 7649583250771531938}
+  - {fileID: 7649583249670537627}
+  - {fileID: 7649583249923407654}
+  - {fileID: 7649583250802627196}
+  - {fileID: 7649583250020252932}
+  - {fileID: 7649583249209994375}
+  - {fileID: 7649583248907632849}
+  - {fileID: 7649583250767359282}
+  - {fileID: 7649583250560139478}
+  - {fileID: 7649583250096465533}
+  - {fileID: 7649583250665291879}
+  - {fileID: 7649583249197227459}
+  - {fileID: 7649583250430884237}
+  - {fileID: 7649583250268100352}
+  text_prefab: {fileID: 4244029962534428768, guid: 7471f4abe983f1d4c90c898f16ac7a89, type: 3}
+  selected_piece: {fileID: 0}
+  selected_tile: {fileID: 0}
 --- !u!33 &7649583250245514256
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10112,7 +10194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 3
   y: 3
@@ -10205,7 +10287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 4
   y: 3
@@ -10321,7 +10403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 4
   y: 2
@@ -10437,7 +10519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799576955823284}
   x: 0
   y: 7
@@ -10553,7 +10635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 3
   y: 0
@@ -10754,7 +10836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 4
   y: 0
@@ -10785,7 +10867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799576426552107}
   x: 0
   y: 0
@@ -11000,7 +11082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290939220703832}
   x: 7
   y: 0
@@ -11060,7 +11142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290938618602554}
   x: 6
   y: 5
@@ -11148,7 +11230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 2
   y: 3
@@ -11249,7 +11331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290939491857384}
   x: 6
   y: 3
@@ -11388,7 +11470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799577531376600}
   x: 1
   y: 7
@@ -11481,7 +11563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799576872643558}
   x: 1
   y: 4
@@ -11682,7 +11764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290939639239567}
   x: 6
   y: 1
@@ -11713,7 +11795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290938917400892}
   x: 6
   y: 4
@@ -11911,7 +11993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 5
   y: 7
@@ -12062,7 +12144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 5
   y: 5
@@ -12102,7 +12184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 2
   y: 0
@@ -12294,7 +12376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 3
   y: 7
@@ -12311,7 +12393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799577194532365}
   x: 1
   y: 1
@@ -12526,7 +12608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 2
   y: 4
@@ -12628,7 +12710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 3145290939418322404}
   x: 6
   y: 7
@@ -12694,7 +12776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 5
   y: 6
@@ -12798,7 +12880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 5
   y: 1
@@ -12926,7 +13008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 2
   y: 6
@@ -13050,7 +13132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 0}
   x: 5
   y: 2
@@ -13222,7 +13304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799577633872643}
   x: 0
   y: 5
@@ -13338,7 +13420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4021d23327a277a429afa28af7291bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_gameboard: {fileID: 0}
+  my_gameboard: {fileID: 7649583250165829007}
   piece: {fileID: 7676799577550878417}
   x: 1
   y: 5
@@ -13379,6 +13461,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!4 &7676799576170987271
 Transform:
   m_ObjectHideFlags: 0
@@ -13461,6 +13544,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!4 &7676799576284579469
 Transform:
   m_ObjectHideFlags: 0
@@ -13557,6 +13641,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!33 &7676799576376405610
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13631,6 +13716,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 15
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!33 &7676799576426552108
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13738,6 +13824,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!33 &7676799576741293324
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13782,6 +13869,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!4 &7676799576817479499
 Transform:
   m_ObjectHideFlags: 0
@@ -13856,6 +13944,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!4 &7676799576872643559
 Transform:
   m_ObjectHideFlags: 0
@@ -13930,6 +14019,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 15
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!4 &7676799576955823285
 Transform:
   m_ObjectHideFlags: 0
@@ -14034,6 +14124,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 27
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!33 &7676799577185840902
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14108,6 +14199,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!33 &7676799577194532366
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14185,6 +14277,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 10
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!4 &7676799577472832843
 Transform:
   m_ObjectHideFlags: 0
@@ -14259,6 +14352,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!4 &7676799577531376601
 Transform:
   m_ObjectHideFlags: 0
@@ -14328,6 +14422,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!33 &7676799577550878418
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14429,6 +14524,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!4 &7676799577586540079
 Transform:
   m_ObjectHideFlags: 0
@@ -14548,6 +14644,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!33 &7676799577633872644
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14694,6 +14791,7 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_gameboard: {fileID: 7649583250165829007}
 --- !u!33 &7676799578162568056
 MeshFilter:
   m_ObjectHideFlags: 0
