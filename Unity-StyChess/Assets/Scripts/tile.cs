@@ -41,7 +41,9 @@ public class tile : MonoBehaviour
     {
         if(piece != null)
         {
-            piece.transform.position = this.transform.position;
+            // TODO: hook in animation and match it with lerp 
+            piece.transform.position = Vector3.Lerp(piece.transform.position, transform.position, 1.0f * Time.deltaTime);
+            //piece.transform.position = transform.position;
         }
     }
 
