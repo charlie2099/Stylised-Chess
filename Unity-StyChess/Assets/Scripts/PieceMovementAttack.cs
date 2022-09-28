@@ -5,13 +5,67 @@ using UnityEngine;
 public class PieceMovementAttack : MonoBehaviour
 {
     public bool am_i_white;
+    /*
 
-    //0 -> pawn
-    //1 -> knight
-    //2 -> bishop
-    //3 -> castle
-    //4 -> queen
-    //5 -> king
+    0 -> pawn
+        white
+            +y1 // move forward
+            +y1, +x1 // Take diag right
+                cannot make this move if on x 7 ( right edge of board)
+            +y1, -x1 // Take diag left
+                cannot make this move if on x 0 ( left edge of board)
+            
+        black
+            -y1 // move forward
+            -y1, -x1 // Take diag right
+                cannot make this move if on x 7 ( right edge of board)
+            -y1, +x1 // Take diag left
+                cannot make this move if on x 0 ( left edge of board)
+    
+    1 -> knight
+    White knight & Black knight
+        +y3, +x1 // big Up + right
+        +y3, -x1 // big Up + left
+        +y1, +x3 // Up + big right
+        +y1, -x3 // up + big left
+        -y3, -x1 // down + big left
+        -y3, +x1 // big down + right
+        -y1, -x3 // down + big left
+        -y1, +x3 // down + big right
+        
+    2 -> bishop
+        +yn, +xn // diag up + right
+        +yn, -xn // diag up + left
+        -yn, +xn // diag down + right
+        -yn, -xn // diag down + left
+
+    3 -> castle
+        +yn // move up
+        -yn // move down
+        +xn // move right
+        -xn // move left
+
+    4 -> queen
+        +yn, +xn // diag up + right
+        +yn, -xn // diag up + left
+        -yn, +xn // diag down + right
+        -yn, -xn // diag down + left
+        +yn // move up
+        -yn // move down
+        +xn // move right
+        -xn // move left
+
+    5 -> king
+        +y1, +x1 // diag up + right
+        +y1, -x1 // diag up + left
+        -y1, +x1 // diag down + right
+        -y1, -x1 // diag down + left
+        +y1 // move up
+        -y1 // move down
+        +x1 // move right
+        -x1 // move left
+
+    */
     public int my_type;
     public tile current_tile;
     public int my_cordinate_x;

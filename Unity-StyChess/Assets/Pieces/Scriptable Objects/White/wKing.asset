@@ -16,7 +16,7 @@ MonoBehaviour:
   model: {fileID: 6909197413860618130, guid: 15fa5ec7bb5f113469ef89ee89b1eb2d, type: 3}
   piece_colour: {r: 1, g: 1, b: 1, a: 1}
   piece_type: King
-  piece_health: 10
+  piece_health: 1
   piece_damage: 1
   promotion_options: []
   weaknesses: []

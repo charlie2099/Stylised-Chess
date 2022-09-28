@@ -93,6 +93,11 @@ public class gameboard : MonoBehaviour
                 selected_tile.piece = selected_piece;
                 selected_piece.my_tile.piece = null;
                 selected_piece.my_tile = selected_tile;
+
+                //FIX MOVEMENT BUGS
+                //PASS TURN
+
+
             }
         }
     }

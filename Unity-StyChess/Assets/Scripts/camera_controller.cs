@@ -42,6 +42,8 @@ public class camera_controller : MonoBehaviour
     public bool rotationEnabled;
     public float rotateSpeed;
 
+    [SerializeField] private GameObject view_target;
+
 
 
 
@@ -58,6 +60,8 @@ public class camera_controller : MonoBehaviour
 
     void Update()
     {
+
+        this.transform.LookAt(view_target.transform);
 
         # region Camera Mode
 

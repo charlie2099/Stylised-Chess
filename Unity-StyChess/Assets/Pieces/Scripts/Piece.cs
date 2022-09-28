@@ -82,6 +82,10 @@ public class Piece : MonoBehaviour
     public void TakeDamage(int attack)
     {
         piece_health -= attack;
+
+        //PASS TURN
+
+
         if (IsDead())
         {
 
