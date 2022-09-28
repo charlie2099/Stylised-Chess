@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: bQueen
   m_EditorClassIdentifier: 
   white: 0
-  model: {fileID: 5237673700404405339, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
+  model: {fileID: 1408806857648302360, guid: ba7cca3e2d8bea34c8e0c9d6ea626f2c, type: 3}
   piece_colour: {r: 1, g: 0, b: 1, a: 1}
   piece_type: Queen
   piece_health: 27
