@@ -19,22 +19,30 @@ public class InternalBoard : MonoBehaviour
      4 wBishop      10 bBishop
      5 wQueen       11 bQueen
      6 wKing        12 bKing
+
+    Vector2 index = new Vector2(0,0);
+        foreach (int tile in _files)
+        {
+            index.x++;
+            if (index.x >= 8)
+            {
+                index.y++;
+                index.x = 0;
+            }
+        }
      
      */
 
-    [SerializeField]
-    public List<int[]> files = new List<int[]>();
-
-    int[,] _files = new int[8, 8] 
+    int[,] files = new int[8, 8] 
           { 
-            { 02, 03, 04, 05, 06, 04, 03, 02 }, 
+     /*x0*/ { 02, 03, 04, 05, 06, 04, 03, 02 }, // x7,y0
             { 01, 01, 01, 01, 01, 01, 01, 01 },
             { 00, 00, 00, 00, 00, 00, 00, 00 },
             { 00, 00, 00, 00, 00, 00, 00, 00 },
             { 00, 00, 00, 00, 00, 00, 00, 00 },
             { 00, 00, 00, 00, 00, 00, 00, 00 },
             { 07, 07, 07, 07, 07, 07, 07, 07 },
-            { 08, 09, 10, 12, 11, 10, 09, 08 }
+            { 08, 09, 10, 12, 11, 10, 09, 08 }  // y7
           };
 
     #region GameObjects
@@ -167,6 +175,9 @@ public class InternalBoard : MonoBehaviour
             case 12:
                 s = "bKing";
                 break;
+            default:
+                s = "That's not a piece, my guy";
+                break;
         }
 
         return s;
@@ -175,27 +186,20 @@ public class InternalBoard : MonoBehaviour
     // Takes in an X and Y coordinate
     public void MoveAtoB(Vector2 start, Vector2 target)
     {
-        int start_contents;
-        int target_contents;
+        int start_contents = 69;
+        int target_contents = 69;
 
-        Vector2 index = new Vector2(0,0);
-        foreach (int tile in _files)
-        {
-            index.x++;
-            if (index.x >= 8)
-            {
-                index.y++;
-                index.x = 0;
-            }
-        }
+        start_contents = files[(int)start.x, (int)start.y];
+        target_contents = files[(int)target.x, (int)target.y];
+
+        Debug.Log(WhatPiece(start_contents));
+        Debug.Log(WhatPiece(target_contents));        
     }
 
     private void Start()
     {
-        //PopulateList();
-
         Vector2 index = new Vector2(0, 0);
-        foreach (int tile in _files)
+        foreach (int tile in files)
         {
             //Create Tile based on rank and file
             Create(tile_position, (int)index.x, (int)index.y);
@@ -212,10 +216,8 @@ public class InternalBoard : MonoBehaviour
         }
 
         // Test move pawn A2 to A4
-        Vector2 origin = new Vector2(0, 1);
-        Vector2 target = new Vector2(0, 3);
-        //MoveAtoB(origin, target);
-    }
-
-    
+        Vector2 origin = new Vector2(0, 1); // wKnight
+        Vector2 target = new Vector2(0, 3); // wQueen
+        MoveAtoB(origin, target);
+    }    
 }
