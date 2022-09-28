@@ -47,7 +47,7 @@ public class Piece : MonoBehaviour
 
     private void OnEnable()
     {
-        
+        PieceManager.all_pieces.Add(this);
     }
 
     private void AssumeTypeAttributes()
