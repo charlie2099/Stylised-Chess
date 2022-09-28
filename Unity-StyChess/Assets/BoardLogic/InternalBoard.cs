@@ -4,6 +4,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 
@@ -33,18 +34,6 @@ public class InternalBoard : MonoBehaviour
      
      */
 
-    int[,] files = new int[8, 8] 
-          { 
-     /*x0*/ { 02, 03, 04, 05, 06, 04, 03, 02 }, // x7,y0
-            { 01, 01, 01, 01, 01, 01, 01, 01 },
-            { 00, 00, 00, 00, 00, 00, 00, 00 },
-            { 00, 00, 00, 00, 00, 00, 00, 00 },
-            { 00, 00, 00, 00, 00, 00, 00, 00 },
-            { 00, 00, 00, 00, 00, 00, 00, 00 },
-            { 07, 07, 07, 07, 07, 07, 07, 07 },
-            { 08, 09, 10, 12, 11, 10, 09, 08 }  // y7
-          };
-
     #region GameObjects
     public GameObject tile_position;
     public GameObject piece_control;
@@ -64,7 +53,69 @@ public class InternalBoard : MonoBehaviour
     public GameObject bKing;
     #endregion
 
+    int[,] files = new int[8, 8]
+          {
+            { 02, 03, 04, 05, 06, 04, 03, 02 },
+            { 01, 01, 01, 01, 01, 01, 01, 01 },
+            { 00, 00, 00, 00, 00, 00, 00, 00 },
+            { 00, 00, 00, 00, 00, 00, 00, 00 },
+            { 00, 00, 00, 00, 00, 00, 00, 00 },
+            { 00, 00, 00, 00, 00, 00, 00, 00 },
+            { 07, 07, 07, 07, 07, 07, 07, 07 },
+            { 08, 09, 10, 12, 11, 10, 09, 08 }
+          };
+
     int instantiate_offset = 5;
+
+    private List<GameObject> all_pieces = new List<GameObject>();
+    [SerializeField] private List<GameObject> w_pieces = new List<GameObject>();
+    [SerializeField] private List<GameObject> b_pieces = new List<GameObject>();
+
+    private GameObject FindPiecesAtCoords(Vector2 _v)
+    {
+        foreach (GameObject _g in w_pieces)
+        {
+            if (_g.GetComponent<Piece>().GetCoords() == _v)
+            {
+                //Debug.Log("We've got a winner!");
+                return _g;
+            }
+        }
+        foreach (GameObject _g in b_pieces)
+        {
+            if (_g.GetComponent<Piece>().GetCoords() == _v)
+            {
+                //Debug.Log("We've got a winner!");
+                return _g;
+            }
+        }
+
+        return this.gameObject;
+    }
+
+    private void UpdatePiecePositions()
+    {
+        foreach (GameObject _g in w_pieces)
+        {
+            //_g.GetComponent<Piece>().SetCoords(new Vector2(3, 3));
+            _g.GetComponent<Piece>().UpdatePosition(instantiate_offset);
+        }
+        foreach (GameObject _g in b_pieces)
+        {
+            _g.GetComponent<Piece>().UpdatePosition(instantiate_offset);
+        }
+    }
+
+    private void SortPieces()
+    {
+        foreach (GameObject _g in all_pieces)
+        {
+            if (_g.GetComponent<Piece>().type.white) { w_pieces.Add(_g); }
+            else { b_pieces.Add(_g); }
+        }
+
+        all_pieces.Clear();
+    }
 
     private GameObject Create(GameObject _type, int _rank, int _file)
     {
@@ -80,6 +131,8 @@ public class InternalBoard : MonoBehaviour
         }
         else
         {
+            all_pieces.Add(_object);
+            _object.GetComponent<Piece>().SetCoords(new Vector2(_rank, _file));
             _object.transform.parent = piece_control.transform;
         }
 
@@ -130,6 +183,7 @@ public class InternalBoard : MonoBehaviour
                 break;
         }
     }
+
     private String WhatPiece(int _i)
     {
         string s = "@";
@@ -183,17 +237,40 @@ public class InternalBoard : MonoBehaviour
         return s;
     }
 
-    // Takes in an X and Y coordinate
-    public void MoveAtoB(Vector2 start, Vector2 target)
+    // POWERFUL. HAS ABSOLUTE AUTHORITY TO MOVE A UNIT
+    public void MoveAtoB(Vector2 _start, Vector2 _target)
     {
-        int start_contents = 69;
-        int target_contents = 69;
+        int start_contents;
+        int target_contents;
 
-        start_contents = files[(int)start.x, (int)start.y];
-        target_contents = files[(int)target.x, (int)target.y];
+        start_contents = files[(int)_start.y, (int)_start.x];
+        target_contents = files[(int)_target.y, (int)_target.x];
 
         Debug.Log(WhatPiece(start_contents));
-        Debug.Log(WhatPiece(target_contents));        
+        Debug.Log(WhatPiece(target_contents));
+
+        // If start tile is not empty & target tile is unoccupied
+        if (start_contents != 0 && target_contents == 0)
+        {
+            if (_start != _target)
+            {
+                // Find piece with matching coords
+                // Set coords to target position
+                FindPiecesAtCoords(_start).GetComponent<Piece>().SetCoords(_target);
+                files[(int)_target.y, (int)_target.x] = start_contents;
+                UpdatePiecePositions();
+            }
+            else
+            {
+                Debug.Log("You are trying to move contents of a tile to itself");
+            }
+        }
+        else
+        {
+            if (target_contents != 0) { Debug.Log("You are trying to move to an occupied tile"); }
+            if (start_contents == 0) { Debug.Log("You are trying to move an empty tile"); }
+        }
+
     }
 
     private void Start()
@@ -215,9 +292,20 @@ public class InternalBoard : MonoBehaviour
             }
         }
 
+        SortPieces();
+        UpdatePiecePositions();        
+    }
+
+    private void Update()
+    {
         // Test move pawn A2 to A4
-        Vector2 origin = new Vector2(0, 1); // wKnight
-        Vector2 target = new Vector2(0, 3); // wQueen
-        MoveAtoB(origin, target);
-    }    
+        Vector2 origin = new Vector2(0, 1);
+        Vector2 target = new Vector2(0, 3);
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Debug.Log("W");
+            MoveAtoB(origin, target);
+            UpdatePiecePositions();
+        }
+    }
 }
