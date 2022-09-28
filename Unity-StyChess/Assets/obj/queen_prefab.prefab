@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1785333053203329954}
   - component: {fileID: 3416294119213743111}
   - component: {fileID: 616406212777167053}
+  - component: {fileID: 744156625133506947}
   m_Layer: 0
   m_Name: queen_prefab
   m_TagString: Untagged
@@ -83,3 +84,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &744156625133506947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408806857648302360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd2ece9671bf7b4daae95ca3bd779c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

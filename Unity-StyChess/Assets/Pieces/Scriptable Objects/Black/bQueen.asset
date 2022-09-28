@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   white: 0
   model: {fileID: 1408806857648302360, guid: ba7cca3e2d8bea34c8e0c9d6ea626f2c, type: 3}
-  piece_colour: {r: 1, g: 0, b: 1, a: 1}
+  piece_colour: {r: 0, g: 0, b: 0, a: 1}
   piece_type: Queen
   piece_health: 27
   piece_damage: 9

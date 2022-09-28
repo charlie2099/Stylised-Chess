@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   white: 0
   model: {fileID: 5237673700404405339, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
-  piece_colour: {r: 1, g: 0, b: 0, a: 1}
+  piece_colour: {r: 0, g: 0, b: 0, a: 1}
   piece_type: Pawn
   piece_health: 3
   piece_damage: 1

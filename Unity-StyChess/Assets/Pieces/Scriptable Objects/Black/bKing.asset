@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: bKing
   m_EditorClassIdentifier: 
   white: 0
-  model: {fileID: 5237673700404405339, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
-  piece_colour: {r: 1, g: 0.29411766, b: 0, a: 1}
+  model: {fileID: 6909197413860618130, guid: 15fa5ec7bb5f113469ef89ee89b1eb2d, type: 3}
+  piece_colour: {r: 0, g: 0, b: 0, a: 1}
   piece_type: King
   piece_health: 10
   piece_damage: 1
