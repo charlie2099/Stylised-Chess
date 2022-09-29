@@ -262,16 +262,20 @@ public class InternalBoard : MonoBehaviour
                 board_data[(int)_target.y, (int)_target.x] = start_contents; // move start piece to target pos
                 // clear start pos
                 UpdatePiecePositions();
+
+                // End turn
             }
             else
             {
                 Debug.Log("You are trying to move contents of a tile to itself");
+                // Don't end turn
             }
         }
         else
         {
             if (target_contents != 0) { Debug.Log("You are trying to move to an occupied tile"); }
             if (start_contents == 0) { Debug.Log("You are trying to move an empty tile"); }
+            // Don't end turn
         }
 
     }
@@ -305,12 +309,11 @@ public class InternalBoard : MonoBehaviour
     {
         // Test move pawn A2 to A4
         Vector2 origin = new Vector2(1, 0); // from
-        Vector2 target = new Vector2(2, 2); // to
+        Vector2 target = new Vector2(2, 5); // to
         if (Input.GetKeyDown(KeyCode.W))
         {
             Debug.Log("W");
             MoveAtoB(origin, target);
-            UpdatePiecePositions();
         }
     }
 
