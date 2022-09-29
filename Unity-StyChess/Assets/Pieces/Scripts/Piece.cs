@@ -155,12 +155,15 @@ public class Piece : MonoBehaviour
         //Pass information if its their respective turns
         try
         {
+            if (my_gameboard.turn_Cycle.white_turn == true && am_i_white)
+                this.my_gameboard.selected_piece = this;
+            else if (my_gameboard.turn_Cycle.black_turn == true && am_i_black)
+                this.my_gameboard.selected_piece = this;
+        }
+        catch(Exception e)
+        {
 
         }
-        if(my_gameboard.turn_Cycle.white_turn == true && am_i_white)
-            this.my_gameboard.selected_piece = this;
-        else if(my_gameboard.turn_Cycle.black_turn == true && am_i_black)
-            this.my_gameboard.selected_piece = this;
     }
 }
 
