@@ -53,7 +53,7 @@ public class InternalBoard : MonoBehaviour
     public GameObject bKing;
     #endregion
 
-    int[,] files = new int[8, 8]
+    int[,] board_data = new int[8, 8]
           {
             { 02, 03, 04, 05, 06, 04, 03, 02 },
             { 01, 01, 01, 01, 01, 01, 01, 01 },
@@ -237,14 +237,15 @@ public class InternalBoard : MonoBehaviour
         return s;
     }
 
+    // Need to point selected unit and selected tile to this
     // POWERFUL. HAS ABSOLUTE AUTHORITY TO MOVE A UNIT
     public void MoveAtoB(Vector2 _start, Vector2 _target)
     {
         int start_contents;
         int target_contents;
 
-        start_contents = files[(int)_start.y, (int)_start.x];
-        target_contents = files[(int)_target.y, (int)_target.x];
+        start_contents = board_data[(int)_start.y, (int)_start.x];
+        target_contents = board_data[(int)_target.y, (int)_target.x];
 
         Debug.Log(WhatPiece(start_contents));
         Debug.Log(WhatPiece(target_contents));
@@ -257,7 +258,9 @@ public class InternalBoard : MonoBehaviour
                 // Find piece with matching coords
                 // Set coords to target position
                 FindPiecesAtCoords(_start).GetComponent<Piece>().SetCoords(_target);
-                files[(int)_target.y, (int)_target.x] = start_contents;
+                board_data[(int)_start.y, (int)_start.x] = 0; // clear start pos as tile is now empty
+                board_data[(int)_target.y, (int)_target.x] = start_contents; // move start piece to target pos
+                // clear start pos
                 UpdatePiecePositions();
             }
             else
@@ -273,10 +276,12 @@ public class InternalBoard : MonoBehaviour
 
     }
 
+    
+
     private void Start()
     {
         Vector2 index = new Vector2(0, 0);
-        foreach (int tile in files)
+        foreach (int tile in board_data)
         {
             //Create Tile based on rank and file
             Create(tile_position, (int)index.x, (int)index.y);
@@ -299,13 +304,30 @@ public class InternalBoard : MonoBehaviour
     private void Update()
     {
         // Test move pawn A2 to A4
-        Vector2 origin = new Vector2(0, 1);
-        Vector2 target = new Vector2(0, 3);
+        Vector2 origin = new Vector2(1, 0); // from
+        Vector2 target = new Vector2(2, 2); // to
         if (Input.GetKeyDown(KeyCode.W))
         {
             Debug.Log("W");
             MoveAtoB(origin, target);
             UpdatePiecePositions();
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Vector2 index = new Vector2(0, 0);
+        foreach (int _tile in board_data)
+        {
+            string piece = _tile.ToString();
+            Handles.Label(new Vector3(index.x * instantiate_offset - 50, 1, index.y * instantiate_offset), piece);
+
+            index.x++;
+            if (index.x >= 8)
+            {
+                index.y++;
+                index.x = 0;
+            }
         }
     }
 }
