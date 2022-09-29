@@ -13,6 +13,23 @@ public class Piece : MonoBehaviour
     public int piece_damage;
     public tile my_tile;
     static readonly int shPropColour = Shader.PropertyToID("_Color");
+    [SerializeField] private Vector2 int_board_coords;
+
+    public void UpdatePosition(int _offset)
+    {
+        this.transform.position = new Vector3(int_board_coords.x * _offset, 0, int_board_coords.y * _offset);
+    }
+
+    public void SetCoords(Vector2 _v)
+    {
+        int_board_coords = _v;
+        Debug.Log(type.piece_type + " " + _v.x + _v.y);
+    }
+
+    public Vector2 GetCoords()
+    {
+        return int_board_coords;
+    }
 
     [Space]
     [Header("Black & White")]
@@ -57,7 +74,7 @@ public class Piece : MonoBehaviour
 
     private void OnEnable()
     {
-        
+        PieceManager.all_pieces.Add(this);
     }
 
     private void AssumeTypeAttributes()

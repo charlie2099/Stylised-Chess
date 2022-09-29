@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6369310552899161030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6369310552899161028}
+  - component: {fileID: 6369310552899161031}
+  m_Layer: 0
+  m_Name: BoardControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6369310552899161028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6369310552899161030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6369310552899161031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6369310552899161030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 654ab0dcbf427254ca3f9e86f3073e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tile_position: {fileID: 0}
+  piece_control: {fileID: 0}
+  wPawn: {fileID: 962452635086592119, guid: a6a729b72c9d3a64db58424d3dba013d, type: 3}
+  wRook: {fileID: 746308703406880698, guid: 888ca44d87ef6b24ab18df33688b2216, type: 3}
+  wKnight: {fileID: 4851458980867227342, guid: cb4b519afe20c834392ea061843a2d8f, type: 3}
+  wBishop: {fileID: 5976470674256288425, guid: 0d9b6f87f4d541343911bb94ffd027f6, type: 3}
+  wQueen: {fileID: 7370492023361666873, guid: feb4ec6879849a94bab1e03fa1ebce5e, type: 3}
+  wKing: {fileID: 2848577819145459640, guid: 9bf7625378a177b4696cc7d4deb4c2d0, type: 3}
+  bPawn: {fileID: 1572993152529808767, guid: 3c515abdeceb8dc45b2f30d0c966d888, type: 3}
+  bRook: {fileID: 4233674814736332773, guid: d00c542939b4dd6438c55b04f26225b0, type: 3}
+  bKnight: {fileID: 4810131801620096966, guid: 6dab9ab4b3c383a43a4487db6efb8eae, type: 3}
+  bBishop: {fileID: 3360070025659224449, guid: 23ec67dbed3958241b0e3bb19fca46e8, type: 3}
+  bQueen: {fileID: 8219869699893509324, guid: 6ce1946bb036a474a99b3af23a9a6852, type: 3}
+  bKing: {fileID: 7010681635373751938, guid: 0c53cf4f5f36c2a48a65ca6a570f800d, type: 3}
