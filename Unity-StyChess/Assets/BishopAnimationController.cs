@@ -10,13 +10,13 @@ public class BishopAnimationController : MonoBehaviour
     private void OnEnable()
     {
         // TODO: Should be checking for tile selected event (when a piece is moved)
-        gameboard.Instance.selected_tile.OnTileSelected += PlayAttackAnim;
+        //gameboard.Instance.selected_tile.OnTileSelected += PlayAttackAnim;
         //pieceSelector.OnPieceSelected += PlayAttackAnim;
     }
 
     private void OnDisable()
     {
-        gameboard.Instance.selected_tile.OnTileSelected -= PlayAttackAnim;
+        //gameboard.Instance.selected_tile.OnTileSelected -= PlayAttackAnim;
         //pieceSelector.OnPieceSelected -= PlayAttackAnim;
     }
     
