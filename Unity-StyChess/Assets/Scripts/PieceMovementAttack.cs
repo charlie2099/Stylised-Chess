@@ -72,7 +72,7 @@ public class PieceMovementAttack : MonoBehaviour
     public int my_cordinate_y;
     public List<List<int>> all_cordinates = new List<List<int>>();
 
-    public void where_can_i_attack_or_move()
+    /*public void where_can_i_attack_or_move()
     {
         all_cordinates.Clear();
         if (this.my_type == 0)
@@ -97,9 +97,9 @@ public class PieceMovementAttack : MonoBehaviour
             all_cordinates.Add(row3);
 
         }
-    }
+    }*/
 
-    public void show_possible_tiles()
+    /*public void show_possible_tiles()
     {
         Debug.Log("Showing Posibble Tiles");
         if(current_tile != null)
@@ -125,11 +125,11 @@ public class PieceMovementAttack : MonoBehaviour
             }
         }
 
-    }
+    }*/
 
     public void OnMouseDown()
     {
-        show_possible_tiles();
+   /*     show_possible_tiles();*/
     }
 
     void update_cordinates()

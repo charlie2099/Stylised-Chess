@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7486380660593019779}
   - component: {fileID: 3059830307639154950}
+  - component: {fileID: 8186311546591430613}
   m_Layer: 0
   m_Name: tile_position
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 8800705488378991400}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3059830307639154950
 MonoBehaviour:
@@ -46,6 +47,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   int_board_coordinates: {x: 0, y: 0}
+  tile_piece_selector: {fileID: 0}
+--- !u!65 &8186311546591430613
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223957754201004585}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7953649, y: 1, z: 4.0093875}
+  m_Center: {x: -0.03189349, y: 0, z: -0.062915325}
 --- !u!1 &4564030830398192097
 GameObject:
   m_ObjectHideFlags: 0

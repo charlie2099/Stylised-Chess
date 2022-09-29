@@ -75,6 +75,9 @@ MonoBehaviour:
   piece_health: 9
   piece_damage: 0
   my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 1
   my_gameboard: {fileID: 0}
 --- !u!1001 &4911216523316882442
 PrefabInstance:

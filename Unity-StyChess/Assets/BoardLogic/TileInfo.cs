@@ -7,6 +7,18 @@ public class TileInfo : MonoBehaviour
 {
     public Vector2 int_board_coordinates;
 
+    [SerializeField]
+    public PieceSelector tile_piece_selector;
+
+    private void OnMouseDown()
+    {
+        if(tile_piece_selector._selectedTile == null)
+        {
+            Debug.Log("Giving my info to the selector");
+            this.tile_piece_selector._selectedTile = this;
+            
+        }
+    }
     private void OnEnable()
     {
         BoardManager.all_tiles.Add(this);

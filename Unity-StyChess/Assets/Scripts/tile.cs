@@ -12,6 +12,8 @@ public class tile : MonoBehaviour
     public int y;
 
     [SerializeField]
+    public PieceSelector piece_selector;
+    [SerializeField]
     PieceMovementAttack piece_movement_attack_controller;
     private void Awake()
     {

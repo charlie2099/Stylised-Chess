@@ -13,11 +13,15 @@ public class PieceSelector : MonoBehaviour
     [SerializeField] private Color selectionIndicatorColour;
     [SerializeField] private Color unitHighlightColour;
     [SerializeField] private bool scaleIndicatorWithPiece;
-    
+    [SerializeField] private InternalBoard internal_board;
+    [Space]
     private GameObject _highlightedObject;
-    private GameObject _selectedObject;
-    private GameObject _lastSelectedObject;
+    [Header("Selected Objects")]
+    [SerializeField] private GameObject _selectedObject;
+    [SerializeField] private GameObject _lastSelectedObject;
     private Color _defaultColour;
+
+    [SerializeField]public TileInfo _selectedTile;
 
     public void ClearSelected()
     {
@@ -53,8 +57,16 @@ public class PieceSelector : MonoBehaviour
         selectionIndicator.transform.localScale = new Vector3(selectorScale, selectorScale, selectorScale);
     }
 
+    [Space]
+    [Header("Turn Cycle Holder")]
+    [SerializeField] public turn_cycle turn_Cycle;
+
     private void Update()
     {
+/*        //Debug
+        Debug.Log("Selected Object"+ _selectedObject.ToString());
+        Debug.Log("Last Selected Object" + _lastSelectedObject.ToString());*/
+
         Ray ray = camera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
 
@@ -62,18 +74,26 @@ public class PieceSelector : MonoBehaviour
         {
             GameObject hitObject = hitInfo.transform.gameObject;
             
-            if (hitObject.GetComponent<Piece>() != null)
+            if (hitObject.GetComponent<Piece>() != null || hitObject.GetComponent<tile>() != null)
             {
                 //HighlightObject(hitObject);
                 if (Input.GetMouseButtonDown(0))
                 {
                     try
                     {
-                        SelectPiece(hitObject);
+                        if(hitObject.GetComponent<Piece>() != null)
+                            SelectPiece(hitObject);
+
+  /*                      if(hitObject.GetComponent<tile>() != null)
+                        {
+                            Debug.Log("Selecting Tile");
+                            SelectTile(hitObject);
+                        }*/
+                            
                     }
                     catch (Exception e)
                     {
-                        //Debug.Log(e);
+                        Debug.Log(e);
                     }
 
                 }
@@ -83,10 +103,100 @@ public class PieceSelector : MonoBehaviour
         {
             ClearSelection();
         }
+
+        //Have to select a piece before tile
+        if(_selectedTile != null && _selectedObject == null && _lastSelectedObject == null)
+        {
+            _lastSelectedObject = null;
+            _selectedObject = null;
+            _selectedTile = null;
+        }
+
+        // DO MOVEMENT AND ATTACK
+        // DO TURN CYCLE CALCULATIONS
+        // DO CAMERA POSITION CALCULATIONS
+
+        //
+        //
+        //MOVE TO EMPTY TILE
+        if( _selectedObject != null  && _selectedTile != null)
+        {
+            //MOVE
+
+            //MOVE RESTRICTIONS WHEN ITS WHITES TURN
+            if(turn_Cycle.white_turn && _selectedObject.GetComponent<Piece>().am_i_white && _selectedTile.)
+            {
+                this.internal_board.MoveAtoB(_selectedObject.GetComponent<Piece>().GetCoords(), _selectedTile.GetCoords());
+
+                //Pass Turn
+                turn_Cycle.next_turn();
+            }
+            //MOVE RESTRICTIONS WHEN ITS BLACKS TURN
+            if (turn_Cycle.black_turn && _selectedObject.GetComponent<Piece>().am_i_black)
+            {
+                this.internal_board.MoveAtoB(_selectedObject.GetComponent<Piece>().GetCoords(), _selectedTile.GetCoords());
+
+                //Pass Turn
+                turn_Cycle.next_turn();
+            }
+
+            //CLEAN SELECTION
+            _lastSelectedObject = null;
+            _selectedObject = null;
+            _selectedTile = null;
+        }
+        //
+        //
+        //
+
+        //
+        //
+        //ATTACK
+        if (_selectedObject != null && _lastSelectedObject != null)
+        {
+            //ATTACK RESTRICTIONS WHEN ITS WHITES TURN
+            if (turn_Cycle.white_turn && _lastSelectedObject.GetComponent<Piece>().am_i_white && _selectedObject.GetComponent<Piece>().am_i_black)
+            {
+                //WHITE ATTACKS
+                _selectedObject.GetComponent<Piece>().TakeDamage(_lastSelectedObject.GetComponent<Piece>().piece_damage);
+
+
+                //Pass Turn
+                turn_Cycle.next_turn();
+
+
+                //Clean
+                _lastSelectedObject = null;
+                _selectedObject = null;
+                _selectedTile = null;
+            }
+            if (turn_Cycle.black_turn && _lastSelectedObject.GetComponent<Piece>().am_i_black && _selectedObject.GetComponent<Piece>().am_i_white)
+            {
+                //BLACK ATTACKS
+                _selectedObject.GetComponent<Piece>().TakeDamage(_lastSelectedObject.GetComponent<Piece>().piece_damage);
+
+                //Pass Turn
+                turn_Cycle.next_turn();
+
+                //Clean
+                _lastSelectedObject = null;
+                _selectedObject = null;
+                _selectedTile = null;
+            }
+        }
+
     }
+    //
+    //
+    //
+
 
     private void SelectPiece(GameObject hitObject)
     {
+        //Debug.Log("Selected Object" + _selectedObject.ToString());
+        //Debug.Log("Last Selected Object" + _lastSelectedObject.ToString());
+
+
         ConfigureIndicatorPosAndScale(hitObject);
 
         if (_selectedObject != null)
@@ -99,6 +209,16 @@ public class PieceSelector : MonoBehaviour
         var tile = gameboard.Instance._piecesDict[piece];
         OnPieceSelected?.Invoke(piece, tile);
     }
+
+    private void SelectTile(GameObject hitObject)
+    {
+/*        ConfigureIndicatorPosAndScale(hitObject);
+        if(_selectedTile == null)
+        {
+            _selectedTile = hitObject.GetComponent<tile>();
+        }*/
+    }
+
 
     private void HighlightObject(GameObject hitObject)
     {

@@ -33,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 7694458305001486258}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5976470674256288421
 MeshFilter:
@@ -75,6 +75,9 @@ MonoBehaviour:
   piece_health: 9
   piece_damage: 0
   my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 1
+  am_i_black: 0
   my_gameboard: {fileID: 0}
 --- !u!1001 &8743423221369104110
 PrefabInstance:
