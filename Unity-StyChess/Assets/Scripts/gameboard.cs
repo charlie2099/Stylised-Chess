@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -6,6 +7,8 @@ using UnityEngine.UI;
 public class gameboard : MonoBehaviour
 {
     public static gameboard Instance;
+
+    public event Action<Piece> OnPieceMoved;
     
     public List<tile> gameboard_tiles = new List<tile>();
     [SerializeField] GameObject text_prefab;
@@ -90,6 +93,7 @@ public class gameboard : MonoBehaviour
         {
             if (selected_tile.piece == null)
             {
+                //OnPieceMoved?.Invoke(selected_piece);
                 selected_tile.piece = selected_piece;
                 selected_piece.my_tile.piece = null;
                 selected_piece.my_tile = selected_tile;
