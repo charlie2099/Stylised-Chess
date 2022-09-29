@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -98,6 +99,7 @@ public class gameboard : MonoBehaviour
         {
             if (selected_tile.piece == null)
             {
+                //OnPieceMoved?.Invoke(selected_piece);
                 selected_tile.piece = selected_piece;
                 selected_piece.my_tile.piece = null;
                 selected_piece.my_tile = selected_tile;

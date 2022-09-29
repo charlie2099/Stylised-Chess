@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wBishop
   m_EditorClassIdentifier: 
   white: 1
-  model: {fileID: 7996242298945482591, guid: 8b5d9548a61c2874e9eff7dcc5156792, type: 3}
+  model: {fileID: 8186784632530586081, guid: 259ea143645eb484494cf3c5f8057aa8, type: 3}
   piece_colour: {r: 1, g: 1, b: 1, a: 1}
   piece_type: Bishop
   piece_health: 9
