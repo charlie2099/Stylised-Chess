@@ -85,7 +85,7 @@ public class TeamManager : MonoBehaviour
                 if (ps.GetSelectedObject().GetComponent<Piece>() == _p)
                 {
                     //Debug.Log(str + " " + ps.GetSelectedObject().GetComponent<Piece>().type.piece_type + " selected");
-                    Debug.Log(str + " " + _p.type.piece_type + " selected");
+                    //Debug.Log(str + " " + _p.type.piece_type + " selected");
                 }
             }
         }
@@ -96,7 +96,7 @@ public class TeamManager : MonoBehaviour
                 if (ps.GetLastSelectedObject().GetComponent<Piece>() == _p)
                 {
                     //Debug.Log(str + " " + ps.GetSelectedObject().GetComponent<Piece>().type.piece_type + " last selected");
-                    Debug.Log(str + " " + _p.type.piece_type + " last selected");
+                    //Debug.Log(str + " " + _p.type.piece_type + " last selected");
                 }
             }
         }

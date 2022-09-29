@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class gameboard : MonoBehaviour
 {
     public static gameboard Instance;
-    
+
+    public turn_cycle turn_Cycle;
     public List<tile> gameboard_tiles = new List<tile>();
     [SerializeField] GameObject text_prefab;
 
@@ -86,6 +87,11 @@ public class gameboard : MonoBehaviour
 
     public void move_piece()
     {
+        if(selected_tile != null && selected_piece == null)
+        {
+            selected_tile = null;
+        }
+
         if(selected_piece != null && selected_tile != null)
         {
             if (selected_tile.piece == null)
@@ -95,12 +101,18 @@ public class gameboard : MonoBehaviour
                 selected_piece.my_tile = selected_tile;
                 Debug.Log("MOVE");
 
+
                 //FIX MOVEMENT BUGS
                 //PASS TURN
-
+                turn_Cycle.next_turn();
 
             }
+
+            selected_piece = null;
+            selected_tile = null;
         }
+
+
     }
 
     public void Update()

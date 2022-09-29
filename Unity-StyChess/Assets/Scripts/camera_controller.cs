@@ -4,7 +4,9 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class camera_controller : MonoBehaviour
 {
-
+    [Header("Cycle Control and Change")]
+    [SerializeField]
+    turn_cycle turn_Cycle;
 
     public float ScreenEdgeBorderThickness = 5.0f; // distance from screen edge. Used for mouse movement
 
@@ -74,23 +76,36 @@ public class camera_controller : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) || Input.mousePosition.y >= Screen.height - ScreenEdgeBorderThickness)
         {
-            panMovement -= Vector3.forward * panSpeed * Time.deltaTime;
+            if(turn_Cycle.black_turn)
+                panMovement -= Vector3.forward * panSpeed * Time.deltaTime;
+            if (turn_Cycle.white_turn)
+                panMovement += Vector3.forward * panSpeed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S) || Input.mousePosition.y <= ScreenEdgeBorderThickness)
         {
-            panMovement += Vector3.forward * panSpeed * Time.deltaTime;
+            if (turn_Cycle.black_turn)
+                panMovement += Vector3.forward * panSpeed * Time.deltaTime;
+            if (turn_Cycle.white_turn)
+                panMovement -= Vector3.forward * panSpeed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.A) || Input.mousePosition.x <= ScreenEdgeBorderThickness)
         {
-            panMovement -= Vector3.left * panSpeed * Time.deltaTime;
+            if (turn_Cycle.black_turn)
+                panMovement -= Vector3.left * panSpeed * Time.deltaTime;
+            if (turn_Cycle.white_turn)
+                panMovement += Vector3.left * panSpeed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.D) || Input.mousePosition.x >= Screen.width - ScreenEdgeBorderThickness)
         {
-            panMovement -= Vector3.right * panSpeed * Time.deltaTime;
+            if (turn_Cycle.black_turn)
+                panMovement -= Vector3.right * panSpeed * Time.deltaTime;
+            if (turn_Cycle.white_turn)
+                panMovement += Vector3.right * panSpeed * Time.deltaTime;
             //pos.x += panSpeed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.Q))
         {
+
             panMovement -= Vector3.up * panSpeed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.E))

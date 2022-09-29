@@ -7,6 +7,7 @@ public class CombatManager : MonoBehaviour
 {
     public List<Piece> all_pieces = new List<Piece>();
 
+    public turn_cycle turn_Cycle;
     private void Update()
     {
         //if (Input.GetKeyDown(KeyCode.Space))
@@ -17,8 +18,19 @@ public class CombatManager : MonoBehaviour
 
     public void AfightsB(Piece _a, Piece _b)
     {
-        Debug.Log(_b.type.piece_type + " taking " + _a.piece_damage + " damage!");
-        _b.TakeDamage(_a.piece_damage);
+        //Debug.Log(_b.type.piece_type + " taking " + _a.piece_damage + " damage!");
+        if(turn_Cycle.white_turn && _b.am_i_black)
+        {
+            _b.TakeDamage(_a.piece_damage);
+            turn_Cycle.next_turn();
+        }
+        if (turn_Cycle.black_turn && _b.am_i_white)
+        {
+            _b.TakeDamage(_a.piece_damage);
+            turn_Cycle.next_turn();
+        }
+
+
     }
 
     private void OnEnable()

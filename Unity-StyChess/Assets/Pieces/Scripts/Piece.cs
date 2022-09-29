@@ -14,6 +14,13 @@ public class Piece : MonoBehaviour
     public tile my_tile;
     static readonly int shPropColour = Shader.PropertyToID("_Color");
 
+    [Space]
+    [Header("Black & White")]
+    [SerializeField]
+    public bool am_i_white;
+    [SerializeField]
+    public bool am_i_black;
+
     public enum Promotion
     {
         queen,
@@ -35,6 +42,9 @@ public class Piece : MonoBehaviour
 
     private void Update()
     {
+        //Interractable
+
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (this.type.piece_type == "Pawn")
@@ -142,7 +152,15 @@ public class Piece : MonoBehaviour
     public gameboard my_gameboard;
     void OnMouseDown()
     {
-        this.my_gameboard.selected_piece = this;
+        //Pass information if its their respective turns
+        try
+        {
+
+        }
+        if(my_gameboard.turn_Cycle.white_turn == true && am_i_white)
+            this.my_gameboard.selected_piece = this;
+        else if(my_gameboard.turn_Cycle.black_turn == true && am_i_black)
+            this.my_gameboard.selected_piece = this;
     }
 }
 
