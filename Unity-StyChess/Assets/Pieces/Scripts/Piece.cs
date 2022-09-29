@@ -23,7 +23,7 @@ public class Piece : MonoBehaviour
     public void SetCoords(Vector2 _v)
     {
         int_board_coords = _v;
-        Debug.Log(type.piece_type + " " + _v.x + _v.y);
+        //Debug.Log(type.piece_type + " " + _v.x + _v.y);
     }
 
     public Vector2 GetCoords()
@@ -74,7 +74,7 @@ public class Piece : MonoBehaviour
 
     private void OnEnable()
     {
-        PieceManager.all_pieces.Add(this);
+        BoardManager.all_pieces.Add(this);
     }
 
     private void AssumeTypeAttributes()

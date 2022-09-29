@@ -47,16 +47,6 @@ public class PieceSelector : MonoBehaviour
         return go;
     }
 
-    private void OnDrawGizmos()
-    {
-        Vector3 scale = new Vector3(3, 3, 3);
-        Vector3 offset = new Vector3(0, 3, 0);
-        Gizmos.color = Color.magenta;
-        if (_selectedObject != null) { Gizmos.DrawWireCube(_selectedObject.transform.position + offset, scale); }
-        if (_lastSelectedObject != null) { Gizmos.DrawWireCube(_lastSelectedObject.transform.position + offset, scale); }
-
-        }
-
     private void Start()
     {
         selectionIndicator.GetComponentInChildren<Renderer>().material.color = selectionIndicatorColour;
@@ -151,4 +141,17 @@ public class PieceSelector : MonoBehaviour
             selectionIndicator.transform.localScale = new Vector3(diameter * selectorScale, 1, diameter * selectorScale);
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Vector3 scale = new Vector3(3, 3, 3);
+        Vector3 offset = new Vector3(0, 3, 0);
+        Gizmos.color = Color.magenta;
+        if (_selectedObject != null) { Gizmos.DrawWireCube(_selectedObject.transform.position + offset, scale); }
+        if (_lastSelectedObject != null) { Gizmos.DrawWireCube(_lastSelectedObject.transform.position + offset, scale); }
+    }
 }
+
+
+
+// MoveAtoB(lastSelected.GetCoords(), selected.GetCoords())

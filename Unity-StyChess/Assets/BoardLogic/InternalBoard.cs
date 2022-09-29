@@ -20,19 +20,16 @@ public class InternalBoard : MonoBehaviour
      4 wBishop      10 bBishop
      5 wQueen       11 bQueen
      6 wKing        12 bKing
-
-    Vector2 index = new Vector2(0,0);
-        foreach (int tile in _files)
-        {
-            index.x++;
-            if (index.x >= 8)
-            {
-                index.y++;
-                index.x = 0;
-            }
-        }
      
      */
+
+    private enum TileDataType
+    { 
+        empty = 0, 
+        wPawn = 1, wRook = 2, wKnight = 3, wBishop =  4, wQueen =  5, wKing =  6,
+        bPawn = 7, bRook = 8, bKnight = 9, bBishop = 10, bQueen = 11, bKing = 12
+    };
+
 
     #region GameObjects
     public GameObject tile_position;
@@ -126,8 +123,7 @@ public class InternalBoard : MonoBehaviour
         if (_type == tile_position)
         {
             _object.transform.parent = this.transform;
-            _object.GetComponent<TileInfo>().x = _rank;
-            _object.GetComponent<TileInfo>().y = _file;
+            _object.GetComponent<TileInfo>().SetCoords(new Vector2(_rank, _file));
         }
         else
         {
@@ -247,8 +243,8 @@ public class InternalBoard : MonoBehaviour
         start_contents = board_data[(int)_start.y, (int)_start.x];
         target_contents = board_data[(int)_target.y, (int)_target.x];
 
-        Debug.Log(WhatPiece(start_contents));
-        Debug.Log(WhatPiece(target_contents));
+        //Debug.Log(WhatPiece(start_contents));
+        //Debug.Log(WhatPiece(target_contents));
 
         // If start tile is not empty & target tile is unoccupied
         if (start_contents != 0 && target_contents == 0)
@@ -285,13 +281,13 @@ public class InternalBoard : MonoBehaviour
     private void Start()
     {
         Vector2 index = new Vector2(0, 0);
-        foreach (int tile in board_data)
+        foreach (int tile_contents in board_data)
         {
             //Create Tile based on rank and file
             Create(tile_position, (int)index.x, (int)index.y);
 
             // Create Pieces based on rank and file
-            CreateBasedOnID(tile, (int)index.x, (int)index.y);
+            CreateBasedOnID(tile_contents, (int)index.x, (int)index.y);
 
             index.x++;
             if (index.x >= 8)
@@ -309,12 +305,8 @@ public class InternalBoard : MonoBehaviour
     {
         // Test move pawn A2 to A4
         Vector2 origin = new Vector2(1, 0); // from
-        Vector2 target = new Vector2(2, 5); // to
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Debug.Log("W");
-            MoveAtoB(origin, target);
-        }
+        Vector2 target = new Vector2(2, 2); // to
+        if (Input.GetKeyDown(KeyCode.W)) { MoveAtoB(origin, target); }
     }
 
     private void OnDrawGizmos()

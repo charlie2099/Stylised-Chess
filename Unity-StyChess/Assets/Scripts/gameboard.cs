@@ -14,6 +14,8 @@ public class gameboard : MonoBehaviour
     public List<tile> Tiles => gameboard_tiles;
     public Dictionary<Piece, tile> _piecesDict = new Dictionary<Piece, tile>();
 
+    public InternalBoard int_board;
+
     private void Awake()
     {
         if (Instance == null)
@@ -87,12 +89,12 @@ public class gameboard : MonoBehaviour
 
     public void move_piece()
     {
-        if(selected_tile != null && selected_piece == null)
+        if (selected_tile != null && selected_piece == null)
         {
             selected_tile = null;
         }
 
-        if(selected_piece != null && selected_tile != null)
+        if (selected_piece != null && selected_tile != null)
         {
             if (selected_tile.piece == null)
             {
@@ -111,7 +113,6 @@ public class gameboard : MonoBehaviour
             selected_piece = null;
             selected_tile = null;
         }
-
 
     }
 
