@@ -114,12 +114,18 @@ public class InternalBoard : MonoBehaviour
         all_pieces.Clear();
     }
 
+    [SerializeField]
+    public PieceSelector internal_board_piece_selector;
     private GameObject Create(GameObject _type, int _rank, int _file)
     {
         GameObject _object;
 
         _object = Instantiate(_type, new Vector3(_rank * instantiate_offset, 0, _file * instantiate_offset), Quaternion.identity);
 
+        if(_object.GetComponent<TileInfo>() != null)
+        {
+            _object.GetComponent<TileInfo>().tile_piece_selector = this.internal_board_piece_selector;
+        }
         if (_type == tile_position)
         {
             _object.transform.parent = this.transform;
