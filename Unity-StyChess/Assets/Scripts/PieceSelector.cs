@@ -124,7 +124,7 @@ public class PieceSelector : MonoBehaviour
             //MOVE
 
             //MOVE RESTRICTIONS WHEN ITS WHITES TURN
-            if(turn_Cycle.white_turn && _selectedObject.GetComponent<Piece>().am_i_white && _selectedTile.)
+            if(turn_Cycle.white_turn && _selectedObject.GetComponent<Piece>().am_i_white)
             {
                 this.internal_board.MoveAtoB(_selectedObject.GetComponent<Piece>().GetCoords(), _selectedTile.GetCoords());
 
