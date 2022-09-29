@@ -19,6 +19,8 @@ public class PieceSelector : MonoBehaviour
     private GameObject _lastSelectedObject;
     private Color _defaultColour;
 
+
+
     public void ClearSelected()
     {
         _selectedObject = null;
@@ -55,6 +57,10 @@ public class PieceSelector : MonoBehaviour
 
     private void Update()
     {
+/*        //Debug
+        Debug.Log("Selected Object"+ _selectedObject.ToString());
+        Debug.Log("Last Selected Object" + _lastSelectedObject.ToString());*/
+
         Ray ray = camera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
 
@@ -73,7 +79,7 @@ public class PieceSelector : MonoBehaviour
                     }
                     catch (Exception e)
                     {
-                        //Debug.Log(e);
+                        Debug.Log(e);
                     }
 
                 }
@@ -87,6 +93,10 @@ public class PieceSelector : MonoBehaviour
 
     private void SelectPiece(GameObject hitObject)
     {
+        Debug.Log("Selected Object" + _selectedObject.ToString());
+        Debug.Log("Last Selected Object" + _lastSelectedObject.ToString());
+
+
         ConfigureIndicatorPosAndScale(hitObject);
 
         if (_selectedObject != null)
