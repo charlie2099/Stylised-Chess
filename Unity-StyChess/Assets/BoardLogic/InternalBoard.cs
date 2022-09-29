@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -67,29 +68,16 @@ public class InternalBoard : MonoBehaviour
     private List<GameObject> all_pieces = new List<GameObject>();
     [SerializeField] private List<GameObject> w_pieces = new List<GameObject>();
     [SerializeField] private List<GameObject> b_pieces = new List<GameObject>();
-
-    private GameObject FindPiecesAtCoords(Vector2 _v)
+    private void SortPieces()
     {
-        foreach (GameObject _g in w_pieces)
+        foreach (GameObject _g in all_pieces)
         {
-            if (_g.GetComponent<Piece>().GetCoords() == _v)
-            {
-                //Debug.Log("We've got a winner!");
-                return _g;
-            }
-        }
-        foreach (GameObject _g in b_pieces)
-        {
-            if (_g.GetComponent<Piece>().GetCoords() == _v)
-            {
-                //Debug.Log("We've got a winner!");
-                return _g;
-            }
+            if (_g.GetComponent<Piece>().type.white) { w_pieces.Add(_g); }
+            else { b_pieces.Add(_g); }
         }
 
-        return this.gameObject;
+        all_pieces.Clear();
     }
-
     private void UpdatePiecePositions()
     {
         foreach (GameObject _g in w_pieces)
@@ -101,17 +89,6 @@ public class InternalBoard : MonoBehaviour
         {
             _g.GetComponent<Piece>().UpdatePosition(instantiate_offset);
         }
-    }
-
-    private void SortPieces()
-    {
-        foreach (GameObject _g in all_pieces)
-        {
-            if (_g.GetComponent<Piece>().type.white) { w_pieces.Add(_g); }
-            else { b_pieces.Add(_g); }
-        }
-
-        all_pieces.Clear();
     }
 
     private GameObject Create(GameObject _type, int _rank, int _file)
@@ -180,59 +157,6 @@ public class InternalBoard : MonoBehaviour
         }
     }
 
-    private String WhatPiece(int _i)
-    {
-        string s = "@";
-
-        switch (_i)
-        {
-            case 0:
-                s = "EMPTY";
-                break;
-            case 1:
-                s = "wPawn";
-                break;
-            case 2:
-                s = "wRook";
-                break;
-            case 3:
-                s = "wKnight";
-                break;
-            case 4:
-                s = "wBishop";
-                break;
-            case 5:
-                s = "wQueen";
-                break;
-            case 6:
-                s = "wKing";
-                break;
-            case 7:
-                s = "bPawn";
-                break;
-            case 8:
-                s = "bRook";
-                break;
-            case 9:
-                s = "bKnight";
-                break;
-            case 10:
-                s = "bBishop";
-                break;
-            case 11:
-                s = "bQueen";
-                break;
-            case 12:
-                s = "bKing";
-                break;
-            default:
-                s = "That's not a piece, my guy";
-                break;
-        }
-
-        return s;
-    }
-
     // Need to point selected unit and selected tile to this
     // POWERFUL. HAS ABSOLUTE AUTHORITY TO MOVE A UNIT
     public void MoveAtoB(Vector2 _start, Vector2 _target)
@@ -254,8 +178,10 @@ public class InternalBoard : MonoBehaviour
                 // Find piece with matching coords
                 // Set coords to target position
                 FindPiecesAtCoords(_start).GetComponent<Piece>().SetCoords(_target);
-                board_data[(int)_start.y, (int)_start.x] = 0; // clear start pos as tile is now empty
                 board_data[(int)_target.y, (int)_target.x] = start_contents; // move start piece to target pos
+                board_data[(int)_start.y, (int)_start.x] = 0; // clear start pos as tile is now empty
+
+
                 // clear start pos
                 UpdatePiecePositions();
 
@@ -276,7 +202,75 @@ public class InternalBoard : MonoBehaviour
 
     }
 
-    
+    private GameObject FindPiecesAtCoords(Vector2 _v)
+    {
+        foreach (GameObject _g in w_pieces)
+        {
+            if (_g.GetComponent<Piece>().GetCoords() == _v)
+            {
+                //Debug.Log("We've got a winner!");
+                return _g;
+            }
+        }
+        foreach (GameObject _g in b_pieces)
+        {
+            if (_g.GetComponent<Piece>().GetCoords() == _v)
+            {
+                //Debug.Log("We've got a winner!");
+                return _g;
+            }
+        }
+
+        return this.gameObject;
+    }
+
+    private Enum WhatPiece(int _i)
+    {
+        switch (_i)
+        {
+            case 0:
+                Debug.Log("WhatPiece(" + _i + ") = " + "empty");
+                return TileDataType.empty;
+            case 1:
+                Debug.Log("WhatPiece(" + _i + ") = " + "wPawn");
+                return TileDataType.wPawn;
+            case 2:
+                Debug.Log("WhatPiece(" + _i + ") = " + "wRook");
+                return TileDataType.wRook;
+            case 3:
+                Debug.Log("WhatPiece(" + _i + ") = " + "wKnight");
+                return TileDataType.wKnight;
+            case 4:
+                Debug.Log("WhatPiece(" + _i + ") = " + "wBishop");
+                return TileDataType.wBishop;
+            case 5:
+                Debug.Log("WhatPiece(" + _i + ") = " + "wQueen");
+                return TileDataType.wQueen;
+            case 6:
+                Debug.Log("WhatPiece(" + _i + ") = " + "wKing");
+                return TileDataType.wKing;
+            case 7:
+                Debug.Log("WhatPiece(" + _i + ") = " + "bPawn");
+                return TileDataType.bPawn;
+            case 8:
+                Debug.Log("WhatPiece(" + _i + ") = " + "bRook");
+                return TileDataType.bRook;
+            case 9:
+                Debug.Log("WhatPiece(" + _i + ") = " + "bKnight");
+                return TileDataType.bKnight;
+            case 10:
+                Debug.Log("WhatPiece(" + _i + ") = " + "bBishop");
+                return TileDataType.bBishop;
+            case 11:
+                Debug.Log("WhatPiece(" + _i + ") = " + "bQueen");
+                return TileDataType.bQueen;
+            case 12:
+                Debug.Log("WhatPiece(" + _i + ") = " + "bKing");
+                return TileDataType.bKing;
+            default:
+                return TileDataType.empty;
+        }
+    }
 
     private void Start()
     {
@@ -298,7 +292,9 @@ public class InternalBoard : MonoBehaviour
         }
 
         SortPieces();
-        UpdatePiecePositions();        
+        UpdatePiecePositions();
+
+        //Debug.Log(WhatPiece(3));
     }
 
     private void Update()
