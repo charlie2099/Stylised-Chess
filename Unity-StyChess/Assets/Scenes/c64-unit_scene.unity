@@ -668,6 +668,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &186579762
 Transform:
   m_ObjectHideFlags: 0
@@ -893,6 +898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team_white: 0
   team_pieces: []
+  ps: {fileID: 0}
 --- !u!1 &231172161
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +933,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &231172166
 Transform:
   m_ObjectHideFlags: 0
@@ -1010,6 +1021,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 10
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &269718960
 Transform:
   m_ObjectHideFlags: 0
@@ -1281,6 +1297,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &418857547
 Transform:
   m_ObjectHideFlags: 0
@@ -1484,6 +1505,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!21 &476805130
 Material:
   serializedVersion: 8
@@ -1850,6 +1876,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 15
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &522937130
 Transform:
   m_ObjectHideFlags: 0
@@ -2005,6 +2036,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &602078366
 Transform:
   m_ObjectHideFlags: 0
@@ -2104,6 +2140,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!224 &619115974 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1413800532152258908, guid: c8b85cfca50f1d740a1b38dc93f5b952, type: 3}
@@ -2159,6 +2200,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 27
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!1001 &647133285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2706,6 +2752,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &788589210
 Transform:
   m_ObjectHideFlags: 0
@@ -2879,6 +2930,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!1 &811139329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2913,6 +2969,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &811139334
 Transform:
   m_ObjectHideFlags: 0
@@ -2963,6 +3024,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &819579637
 Transform:
   m_ObjectHideFlags: 0
@@ -3059,6 +3125,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!21 &879187651
 Material:
   serializedVersion: 8
@@ -3139,6 +3210,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 10
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!224 &970135590 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1413800532152258908, guid: c8b85cfca50f1d740a1b38dc93f5b952, type: 3}
@@ -3298,6 +3374,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!33 &978211981
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3381,6 +3462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   all_pieces: []
+  turn_Cycle: {fileID: 0}
 --- !u!1 &1039718127
 GameObject:
   m_ObjectHideFlags: 0
@@ -3468,6 +3550,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!21 &1061937656
 Material:
   serializedVersion: 8
@@ -3758,6 +3845,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!21 &1106079338
 Material:
   serializedVersion: 8
@@ -3951,6 +4043,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!224 &1245499900 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1413800532152258908, guid: c8b85cfca50f1d740a1b38dc93f5b952, type: 3}
@@ -4006,6 +4103,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!1 &1263333690
 GameObject:
   m_ObjectHideFlags: 0
@@ -4210,6 +4312,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &1296985686
 Transform:
   m_ObjectHideFlags: 0
@@ -4260,6 +4367,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &1370436922
 Transform:
   m_ObjectHideFlags: 0
@@ -4434,6 +4546,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 15
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!1 &1415966407
 GameObject:
   m_ObjectHideFlags: 0
@@ -4468,6 +4585,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 27
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &1415966412
 Transform:
   m_ObjectHideFlags: 0
@@ -5347,6 +5469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team_white: 1
   team_pieces: []
+  ps: {fileID: 0}
 --- !u!1 &1570271065
 GameObject:
   m_ObjectHideFlags: 0
@@ -5641,6 +5764,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!1 &1671404324
 GameObject:
   m_ObjectHideFlags: 0
@@ -5675,6 +5803,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 15
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &1671404329
 Transform:
   m_ObjectHideFlags: 0
@@ -5888,6 +6021,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &1698438757
 Transform:
   m_ObjectHideFlags: 0
@@ -6132,6 +6270,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!21 &1843402468
 Material:
   serializedVersion: 8
@@ -6196,6 +6339,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &1873667516
 Transform:
   m_ObjectHideFlags: 0
@@ -6498,6 +6646,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 15
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!21 &1920750097
 Material:
   serializedVersion: 8
@@ -6562,6 +6715,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 3
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!4 &1933032776
 Transform:
   m_ObjectHideFlags: 0
@@ -6775,6 +6933,11 @@ MonoBehaviour:
   col: {r: 0, g: 0, b: 0, a: 0}
   piece_health: 9
   piece_damage: 0
+  my_tile: {fileID: 0}
+  int_board_coords: {x: 0, y: 0}
+  am_i_white: 0
+  am_i_black: 0
+  my_gameboard: {fileID: 0}
 --- !u!224 &2022381992 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1413800532152258908, guid: c8b85cfca50f1d740a1b38dc93f5b952, type: 3}
