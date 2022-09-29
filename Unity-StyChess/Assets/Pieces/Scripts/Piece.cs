@@ -135,10 +135,9 @@ public class Piece : MonoBehaviour
         Debug.Log("ATTACK");
         OnTakenDamage?.Invoke(this);
         
-        if (GetComponentInChildren<Animator>() != null)
-        {
-            GetComponentInChildren<Animator>().SetTrigger("damaged");
-        }
+        
+        GetComponentInChildren<Animator>().SetTrigger("damaged");
+        
         
         //PASS TURN
 
