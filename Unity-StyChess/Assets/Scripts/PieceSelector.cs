@@ -3,13 +3,14 @@ using UnityEngine;
 
 public class PieceSelector : MonoBehaviour
 {
+    public static PieceSelector Instance;
     public event Action<Piece, tile> OnPieceSelected;
 
     [SerializeField] private Camera camera;
     
     [Header("Visuals")]
     [Range(1, 5)] [SerializeField] private float selectorScale = 1.5f;
-    [SerializeField] private GameObject selectionIndicator;
+    public GameObject selectionIndicator;
     [SerializeField] private Color selectionIndicatorColour;
     [SerializeField] private Color unitHighlightColour;
     [SerializeField] private bool scaleIndicatorWithPiece;
@@ -18,6 +19,24 @@ public class PieceSelector : MonoBehaviour
     private GameObject _selectedObject;
     private GameObject _lastSelectedObject;
     private Color _defaultColour;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Debug.LogError("There should only be one instance of PieceSelector in the scene!");
+        }
+    }
+
+    private void HideIndicator(tile obj)
+    {
+        Debug.Log("Hello");
+        selectionIndicator.SetActive(false);
+    }
 
     public void ClearSelected()
     {
@@ -49,6 +68,7 @@ public class PieceSelector : MonoBehaviour
 
     private void Start()
     {
+        selectionIndicator.SetActive(false);
         selectionIndicator.GetComponentInChildren<Renderer>().material.color = selectionIndicatorColour;
         selectionIndicator.transform.localScale = new Vector3(selectorScale, selectorScale, selectorScale);
     }
@@ -140,6 +160,8 @@ public class PieceSelector : MonoBehaviour
             float diameter = hitObject.GetComponent<Renderer>().bounds.size.x;
             selectionIndicator.transform.localScale = new Vector3(diameter * selectorScale, 1, diameter * selectorScale);
         }
+        
+        selectionIndicator.SetActive(true);
     }
 
     private void OnDrawGizmos()
@@ -151,7 +173,4 @@ public class PieceSelector : MonoBehaviour
         if (_lastSelectedObject != null) { Gizmos.DrawWireCube(_lastSelectedObject.transform.position + offset, scale); }
     }
 }
-
-
-
 // MoveAtoB(lastSelected.GetCoords(), selected.GetCoords())

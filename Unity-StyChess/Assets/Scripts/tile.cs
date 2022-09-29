@@ -53,5 +53,6 @@ public class tile : MonoBehaviour
     {
         this.my_gameboard.selected_tile = this;
         OnTileSelected?.Invoke(this);
+        PieceSelector.Instance.selectionIndicator.SetActive(false);
     }
 }
