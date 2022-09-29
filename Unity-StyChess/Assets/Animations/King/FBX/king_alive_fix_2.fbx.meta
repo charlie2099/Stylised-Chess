@@ -1,11 +1,44 @@
 fileFormatVersion: 2
-guid: 95071bb8ac9ef4542bf09a59d1e18030
+guid: 326797a18b4265043badf27c4197ae2b
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable:
   - first:
+      74: 3323258786290204504
+    second: King_Base|King_BaseAction
+  - first:
+      74: -9096963456777052844
+    second: King_Base|King_bodyAction
+  - first:
+      74: -2308276236833927311
+    second: King_Base|King_head.001Action
+  - first:
+      74: -3733136020520377825
+    second: King_Base|King_headAction
+  - first:
+      74: 4462440114431894259
+    second: King_body|King_BaseAction
+  - first:
       74: -3501501282800423260
     second: King_body|King_bodyAction
+  - first:
+      74: -8163842313545404986
+    second: King_body|King_head.001Action
+  - first:
+      74: 6211674726549441743
+    second: King_body|King_headAction
+  - first:
+      74: -834329306173357812
+    second: King_head|King_BaseAction
+  - first:
+      74: -7664390184067634501
+    second: King_head|King_bodyAction
+  - first:
+      74: 6407487817505394426
+    second: King_head|King_head.001Action
+  - first:
+      74: 4885781074627080428
+    second: King_head|King_headAction
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -43,10 +76,10 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
-    importVisibility: 1
-    importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0

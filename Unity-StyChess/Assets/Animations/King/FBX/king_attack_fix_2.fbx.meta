@@ -1,20 +1,17 @@
 fileFormatVersion: 2
-guid: 39daa809e8b4aa641887b2abeb00a9ae
+guid: 2f2bcf9128b99b64295b5bc2aa11a7ca
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable:
   - first:
-      74: 3323258786290204504
-    second: King_Base|King_BaseAction
-  - first:
-      74: -9096963456777052844
-    second: King_Base|King_bodyAction
-  - first:
-      74: -3733136020520377825
-    second: King_Base|King_headAction
-  - first:
       74: 4462440114431894259
     second: King_body|King_BaseAction
+  - first:
+      74: 7440538945779615103
+    second: King_body|King_body.001|King_body|King_bodyAction
+  - first:
+      74: 6160980072116237688
+    second: King_body|King_body.002Action
   - first:
       74: -3501501282800423260
     second: King_body|King_bodyAction
@@ -22,14 +19,17 @@ ModelImporter:
       74: 6211674726549441743
     second: King_body|King_headAction
   - first:
-      74: -834329306173357812
-    second: King_head|King_BaseAction
+      74: 1573039733545936222
+    second: King_body.001|King_BaseAction
   - first:
-      74: -7664390184067634501
-    second: King_head|King_bodyAction
+      74: -2641410896509491110
+    second: King_body.001|King_body.001|King_body|King_bodyAction
   - first:
-      74: 4885781074627080428
-    second: King_head|King_headAction
+      74: 2341931413937338011
+    second: King_body.001|King_body.002Action
+  - first:
+      74: -433111287361054253
+    second: King_body.001|King_headAction
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -67,10 +67,10 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
-    importVisibility: 1
-    importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
