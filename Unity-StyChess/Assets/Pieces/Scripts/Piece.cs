@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour
 {
+    public event Action<Piece> OnTakenDamage;
+    public event Action<Piece> OnDeath;
+    
     public PieceType type;
     public GameObject model;
     public Color col;
@@ -14,6 +17,12 @@ public class Piece : MonoBehaviour
     public tile my_tile;
     static readonly int shPropColour = Shader.PropertyToID("_Color");
     [SerializeField] private Vector2 int_board_coords;
+    //private Animator _animator;
+
+    private void Awake()
+    {
+        //_animator = GetComponentInChildren<Animator>();
+    }
 
     public void UpdatePosition(int _offset)
     {
@@ -101,15 +110,35 @@ public class Piece : MonoBehaviour
                 material.SetFloat("_Health", (float)piece_health / (float)type.piece_health);
         }
         if (IsDead()) 
-        { 
-            Destroy(this.gameObject);
+        {
+            StartCoroutine(BeginDeathAnimation());
         }
+    }
+
+    private IEnumerator BeginDeathAnimation()
+    {
+        OnDeath?.Invoke(this); // Destroyed before animation can start
+
+        if (GetComponentInChildren<Animator>() != null)
+        {
+            GetComponentInChildren<Animator>().SetTrigger("death");
+        }
+
+        yield return new WaitForSeconds(2.0f);
+        
+        Destroy(this.gameObject);
     }
 
     public void TakeDamage(int attack)
     {
         piece_health -= attack;
-
+        Debug.Log("ATTACK");
+        OnTakenDamage?.Invoke(this);
+        
+        
+        GetComponentInChildren<Animator>().SetTrigger("damaged");
+        
+        
         //PASS TURN
 
 

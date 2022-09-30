@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: bKnight
   m_EditorClassIdentifier: 
   white: 0
-  model: {fileID: 7686701655168334399, guid: b264c4656ed75ea48bdf1c2de5fe9b95, type: 3}
+  model: {fileID: 7915257683666797678, guid: 2160af1045eda804a889724d028f5e5b, type: 3}
   piece_colour: {r: 0, g: 0, b: 0, a: 1}
   piece_type: Knight
   piece_health: 9

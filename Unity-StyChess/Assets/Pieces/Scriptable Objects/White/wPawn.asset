@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wPawn
   m_EditorClassIdentifier: 
   white: 1
-  model: {fileID: 5237673700404405339, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
+  model: {fileID: 2081242764039309787, guid: 90671b9dbaeae4549a3943162c277866, type: 3}
   piece_colour: {r: 1, g: 1, b: 1, a: 1}
   piece_type: Pawn
   piece_health: 3

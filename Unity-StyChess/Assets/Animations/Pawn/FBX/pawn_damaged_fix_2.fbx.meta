@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: aadf6bdd65058be49bf012101a6e50b1
+ModelImporter:
+  serializedVersion: 22103
+  internalIDToNameTable:
+  - first:
+      74: 742210503478307586
+    second: Pawn_Base|Cone.001|Cone.001|ConeAction
+  - first:
+      74: -6850088263488103186
+    second: Pawn_Base|Cone.001|Cone.001|ConeAction.001
+  - first:
+      74: 2833236959452678055
+    second: Pawn_Base|ConeAction
+  - first:
+      74: 7775871149533496972
+    second: Pawn_Base|ConeAction.001
+  - first:
+      74: -9063502455695815083
+    second: Pawn_Base|Cone|Cone|ConeAction
+  - first:
+      74: 8291222783464113186
+    second: Pawn_Base|Cone|Cone|ConeAction.001
+  - first:
+      74: 4611723775038988217
+    second: Pawn_Base|Pawn_BaseAction
+  - first:
+      74: 5634683052695035837
+    second: Pawn_Base|Pawn_headAction
+  - first:
+      74: -8121637593774630467
+    second: Pawn_head|Cone.001|Cone.001|ConeAction
+  - first:
+      74: 4718094410126465284
+    second: Pawn_head|Cone.001|Cone.001|ConeAction.001
+  - first:
+      74: -2363744342260296893
+    second: Pawn_head|ConeAction
+  - first:
+      74: -1490372973807679881
+    second: Pawn_head|ConeAction.001
+  - first:
+      74: 949210729377543021
+    second: Pawn_head|Cone|Cone|ConeAction
+  - first:
+      74: -3848992399501633711
+    second: Pawn_head|Cone|Cone|ConeAction.001
+  - first:
+      74: 7567694576873680635
+    second: Pawn_head|Pawn_BaseAction
+  - first:
+      74: -1609149817194025019
+    second: Pawn_head|Pawn_headAction
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
