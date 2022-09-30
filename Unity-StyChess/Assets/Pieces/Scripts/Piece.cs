@@ -71,14 +71,14 @@ public class Piece : MonoBehaviour
         //Interractable
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (this.type.piece_type == "Pawn")
-            {
-                Promote(Promotion.bishop);
-                //TakeDamage(1);
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    if (this.type.piece_type == "Pawn")
+        //    {
+        //        Promote(Promotion.bishop);
+        //        //TakeDamage(1);
+        //    }
+        //}
     }
 
     private void OnEnable()
@@ -117,12 +117,17 @@ public class Piece : MonoBehaviour
 
     private IEnumerator BeginDeathAnimation()
     {
+        // Send Coords to InternalBoard for deletion
+        InternalBoard int_b = GameObject.FindWithTag("GameController").GetComponent<InternalBoard>();
+        int_b.ClearPieceWithCoords(GetCoords());
+
         OnDeath?.Invoke(this); // Destroyed before animation can start
 
         if (GetComponentInChildren<Animator>() != null)
         {
             GetComponentInChildren<Animator>().SetTrigger("death");
         }
+
 
         yield return new WaitForSeconds(2.0f);
         
@@ -144,7 +149,7 @@ public class Piece : MonoBehaviour
 
         if (IsDead())
         {
-
+            
         }
 
     }

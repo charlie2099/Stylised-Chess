@@ -31,6 +31,8 @@ public class BoardManager : MonoBehaviour
         {
             foreach (Piece piece in all_pieces)
             {
+                if (piece != null)
+                {
                 Vector3 manager_pos = debug_pieces.transform.position;
                 Vector3 piece_pos = piece.transform.position;
                 float half_height = (manager_pos.y - piece_pos.y) * 0.5f;
@@ -45,6 +47,8 @@ public class BoardManager : MonoBehaviour
                     piece.type.piece_colour,
                     EditorGUIUtility.whiteTexture,
                     1.0f);
+
+                }
             }
 
             foreach (TileInfo tile in all_tiles)

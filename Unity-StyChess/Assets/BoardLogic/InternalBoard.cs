@@ -75,8 +75,6 @@ public class InternalBoard : MonoBehaviour
             if (_g.GetComponent<Piece>().type.white) { w_pieces.Add(_g); }
             else { b_pieces.Add(_g); }
         }
-
-        all_pieces.Clear();
     }
     private void UpdatePiecePositions()
     {
@@ -89,17 +87,6 @@ public class InternalBoard : MonoBehaviour
         {
             _g.GetComponent<Piece>().UpdatePosition(instantiate_offset);
         }
-    }
-
-    private void SortPieces()
-    {
-        foreach (GameObject _g in all_pieces)
-        {
-            if (_g.GetComponent<Piece>().type.white) { w_pieces.Add(_g); }
-            else { b_pieces.Add(_g); }
-        }
-
-        all_pieces.Clear();
     }
 
     [SerializeField]
@@ -289,6 +276,11 @@ public class InternalBoard : MonoBehaviour
         }
     }
 
+    public void ClearPieceWithCoords(Vector2 _pos)
+    {
+        board_data[(int)_pos.y, (int)_pos.x] = 0;
+    }
+
     private void Start()
     {
         Vector2 index = new Vector2(0, 0);
@@ -319,7 +311,8 @@ public class InternalBoard : MonoBehaviour
         // Test move pawn A2 to A4
         Vector2 origin = new Vector2(1, 0); // from
         Vector2 target = new Vector2(2, 2); // to
-        if (Input.GetKeyDown(KeyCode.W)) { MoveAtoB(origin, target); }
+        if (Input.GetKeyDown(KeyCode.W)) { ClearPieceWithCoords(new Vector2(1, 0)); }
+
     }
 
     private void OnDrawGizmos()
