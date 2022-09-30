@@ -118,8 +118,8 @@ public class Piece : MonoBehaviour
     private IEnumerator BeginDeathAnimation()
     {
         // Send Coords to InternalBoard for deletion
-        InternalBoard int_b = GameObject.FindWithTag("GameController").GetComponent<InternalBoard>();
-        int_b.ClearPieceWithCoords(GetCoords());
+        //InternalBoard int_b = GameObject.FindWithTag("GameController").GetComponent<InternalBoard>();
+       // int_b.ClearPieceWithCoords(GetCoords());
 
         OnDeath?.Invoke(this); // Destroyed before animation can start
 
@@ -149,7 +149,18 @@ public class Piece : MonoBehaviour
 
         if (IsDead())
         {
-            
+            try
+            {
+                InternalBoard int_b = GameObject.FindWithTag("GameController").GetComponent<InternalBoard>();
+                int_b.ClearPieceWithCoords(GetCoords());
+                turn_cycle turn_Cycle = GameObject.FindWithTag("Turn Manager").GetComponent<turn_cycle>();
+                turn_Cycle.next_turn();
+            }
+            catch (Exception e)
+            {
+
+                
+            }
         }
 
     }

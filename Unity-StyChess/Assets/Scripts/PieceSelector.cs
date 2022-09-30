@@ -146,18 +146,32 @@ public class PieceSelector : MonoBehaviour
             //MOVE RESTRICTIONS WHEN ITS WHITES TURN
             if(turn_Cycle.white_turn && _selectedObject.GetComponent<Piece>().am_i_white)
             {
-                this.internal_board.MoveAtoB(_selectedObject.GetComponent<Piece>().GetCoords(), _selectedTile.GetCoords());
+                try
+                {
+                    this.internal_board.MoveAtoB(_selectedObject.GetComponent<Piece>().GetCoords(), _selectedTile.GetCoords());
 
-                //Pass Turn
-                turn_Cycle.next_turn();
+                    //Pass Turn
+                    turn_Cycle.next_turn();
+                }
+                catch (Exception e)
+                {
+
+                }
             }
             //MOVE RESTRICTIONS WHEN ITS BLACKS TURN
             if (turn_Cycle.black_turn && _selectedObject.GetComponent<Piece>().am_i_black)
             {
-                this.internal_board.MoveAtoB(_selectedObject.GetComponent<Piece>().GetCoords(), _selectedTile.GetCoords());
+                try
+                {
+                    this.internal_board.MoveAtoB(_selectedObject.GetComponent<Piece>().GetCoords(), _selectedTile.GetCoords());
 
-                //Pass Turn
-                turn_Cycle.next_turn();
+                    //Pass Turn
+                    turn_Cycle.next_turn();
+                }
+                catch(Exception e)
+                {
+
+                }
             }
 
             //CLEAN SELECTION
@@ -177,6 +191,10 @@ public class PieceSelector : MonoBehaviour
             //ATTACK RESTRICTIONS WHEN ITS WHITES TURN
             if (turn_Cycle.white_turn && _lastSelectedObject.GetComponent<Piece>().am_i_white && _selectedObject.GetComponent<Piece>().am_i_black)
             {
+                //Pass Turn
+                turn_Cycle.next_turn();
+
+
                 _lastSelectedObject.GetComponent<Piece>().GetComponentInChildren<Animator>().SetTrigger("attack");
 
                     //WHITE ATTACKS
@@ -184,7 +202,7 @@ public class PieceSelector : MonoBehaviour
 
 
                 //Pass Turn
-                turn_Cycle.next_turn();
+
 
 
                 //Clean
@@ -194,13 +212,15 @@ public class PieceSelector : MonoBehaviour
             }
             if (turn_Cycle.black_turn && _lastSelectedObject.GetComponent<Piece>().am_i_black && _selectedObject.GetComponent<Piece>().am_i_white)
             {
+                //Pass Turn
+                turn_Cycle.next_turn();
+
                 _lastSelectedObject.GetComponent<Piece>().GetComponentInChildren<Animator>().SetTrigger("attack");
                 
                 //BLACK ATTACKS
                 _selectedObject.GetComponent<Piece>().TakeDamage(_lastSelectedObject.GetComponent<Piece>().piece_damage);
 
-                //Pass Turn
-                turn_Cycle.next_turn();
+
 
                 //Clean
                 _lastSelectedObject = null;
