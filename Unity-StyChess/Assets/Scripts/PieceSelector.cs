@@ -177,7 +177,9 @@ public class PieceSelector : MonoBehaviour
             //ATTACK RESTRICTIONS WHEN ITS WHITES TURN
             if (turn_Cycle.white_turn && _lastSelectedObject.GetComponent<Piece>().am_i_white && _selectedObject.GetComponent<Piece>().am_i_black)
             {
-                //WHITE ATTACKS
+                _lastSelectedObject.GetComponent<Piece>().GetComponentInChildren<Animator>().SetTrigger("attack");
+
+                    //WHITE ATTACKS
                 _selectedObject.GetComponent<Piece>().TakeDamage(_lastSelectedObject.GetComponent<Piece>().piece_damage);
 
 
@@ -192,6 +194,8 @@ public class PieceSelector : MonoBehaviour
             }
             if (turn_Cycle.black_turn && _lastSelectedObject.GetComponent<Piece>().am_i_black && _selectedObject.GetComponent<Piece>().am_i_white)
             {
+                _lastSelectedObject.GetComponent<Piece>().GetComponentInChildren<Animator>().SetTrigger("attack");
+                
                 //BLACK ATTACKS
                 _selectedObject.GetComponent<Piece>().TakeDamage(_lastSelectedObject.GetComponent<Piece>().piece_damage);
 
