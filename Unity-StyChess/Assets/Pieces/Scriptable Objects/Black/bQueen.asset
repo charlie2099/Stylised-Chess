@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2db15297de159414c80fb6b9db4d4e51, type: 3}
+  m_Name: bQueen
+  m_EditorClassIdentifier: 
+  white: 0
+  model: {fileID: 5328111220883746452, guid: cefa04f7b877e0b408e6c3554d193095, type: 3}
+  piece_colour: {r: 0, g: 0, b: 0, a: 1}
+  piece_type: Queen
+  piece_health: 27
+  piece_damage: 9
+  promotion_options: []
+  weaknesses:
+  - {fileID: 0}
