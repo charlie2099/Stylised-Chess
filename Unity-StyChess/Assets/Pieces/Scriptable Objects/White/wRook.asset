@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wRook
   m_EditorClassIdentifier: 
   white: 1
-  model: {fileID: 5237673700404405339, guid: f99624f6f0ca43c479c75ac59c5b11fa, type: 3}
+  model: {fileID: 1184661896816267861, guid: 31b959c461b0dc5488624a3ee93c53e1, type: 3}
   piece_colour: {r: 1, g: 1, b: 1, a: 1}
   piece_type: Rook
   piece_health: 15
