@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class tile : MonoBehaviour
 {
+    public event Action<tile> OnTileSelected; 
+
     public gameboard my_gameboard;
     public Piece piece;
     [SerializeField]
@@ -43,7 +46,6 @@ public class tile : MonoBehaviour
     {
         if(piece != null)
         {
-            // TODO: hook in animation and match it with lerp 
             piece.transform.position = Vector3.Lerp(piece.transform.position, transform.position, 1.0f * Time.deltaTime);
             //piece.transform.position = transform.position;
         }
@@ -52,5 +54,7 @@ public class tile : MonoBehaviour
     public void OnMouseDown()
     {
         this.my_gameboard.selected_tile = this;
+        OnTileSelected?.Invoke(this);
+        PieceSelector.Instance.selectionIndicator.SetActive(false);
     }
 }

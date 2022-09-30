@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1341,9 +1341,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 952669597}
-  selectorScale: 1.5
+  selectorScale: 2
   selectionIndicator: {fileID: 754721956}
-  selectionIndicatorColour: {r: 0, g: 0, b: 0, a: 0}
+  selectionIndicatorColour: {r: 1, g: 0.6034184, b: 0, a: 0}
   unitHighlightColour: {r: 0, g: 0, b: 0, a: 0}
   scaleIndicatorWithPiece: 0
   internal_board: {fileID: 1432399865}
